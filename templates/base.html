@@ -31,10 +31,23 @@
     <title>Brew Town</title>
   </head>
   <body>
-    <header><h1>Works!</h1></header>
+    <header class="container-fluid">
+      <div class="row">
+        <div class="col-2 offset-2">Brew Town</div>
+        <div class="col-4">Search</div>
+        <div class="col-2">Sign In/Profile</div>
+        <div class="col-2">Shopping Basket</div>
+      </div>
+      <div class="row justify-content-center">
+          <div class="col-1">All Products</div>
+          <div class="col-1">Teas</div>
+          <div class="col-1">Coffees</div>
+          <div class="col-1">Subscriptions</div>
+      </div>
+    </header>
 
     {% if messages %}
-    <div>Messages Here!</div>
+      <div>Messages Here!</div>
     {% endif %}
 
     {% block content %}
