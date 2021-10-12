@@ -31,8 +31,17 @@
     <title>Brew Town</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <header><h1>Works!</h1></header>
 
+    {% if messages %}
+    <div>Messages Here!</div>
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}]
+
+    {% block postloadjs %}
+    {% endblock %}
    
     
   </body>
