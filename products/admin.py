@@ -29,4 +29,3 @@ class CategoryAdmin(admin.ModelAdmin):
 #Allows the admin to display the data and formating of the database.
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
-
