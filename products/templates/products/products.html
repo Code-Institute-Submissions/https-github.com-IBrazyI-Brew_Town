@@ -10,7 +10,7 @@
         </div>
         {% for product in products %}
             <p>{{ product.name }}</p>
-            <img src="{{ product.image.url }}">
+            <img src="{{ product.image.url}}" alt="{{ product.name }}">
         {% endfor %}
     </div>
 </div>
