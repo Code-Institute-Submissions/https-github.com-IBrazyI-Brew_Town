@@ -19,9 +19,9 @@ def view_all_products(request):
             queries = Q(names__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
-        products_all = {
-            'products' : products,
-            'search_term' : query,
+    products_all = {
+        'products' : products,
+        'search_term' : query,
         }
 
-    return render(request, 'products/products.html')
+    return render(request, 'products/products.html', products_all)

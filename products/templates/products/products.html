@@ -8,6 +8,9 @@
         <div class="col">
             <h2>Products</h2>
         </div>
+        {% for product in products %}
+            <p>{{ product.name }}</p>
+        {% endfor %}
     </div>
 </div>
 
