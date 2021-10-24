@@ -49,10 +49,10 @@
       </div>
       <div class="row justify-content-center">
           <div class="col-1">
-            <a href="{% url 'products' %}">All Products</a>
+            <a class="btn btn-secondary w-100" href="{% url 'products' %}">All Products</a>
           </div>
           <div class="dropdown col-1">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Teas</a>
+            <a class="btn btn-secondary dropdown-toggle w-100" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Tea</a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <li><a class="dropdown-item" href="{% url 'products' %}?category=tea_black">Black Teas</a></li>
               <li><a class="dropdown-item" href="{% url 'products' %}?category=tea_earlgrey">Earl Grey</a></li>
@@ -62,15 +62,15 @@
               <li><a class="dropdown-item" href="{% url 'products' %}?category=tea_green">Green Teas</a></li>
             </ul>
           </div>
-
-
-
-
-
-
-
-          <div class="col-1"><a href="{% url 'products' %}?category=coffee_instant,coffee_ground,coffee_beans">Coffees</a></div>
-          <div class="col-1"><a href="{% url 'products' %}?category=subscriptions">Subscriptions</a></div>
+          <div class="dropdown col-1">
+            <a class="btn btn-secondary dropdown-toggle w-100" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Coffee</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="{% url 'products' %}?category=coffee_instant">Instant Coffee</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?category=coffee_ground">Ground Coffee</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?category=coffee_beans">Coffee Beans</a></li>
+            </ul>
+          </div>
+          <div class="col-1"><a class="btn btn-secondary w-100" href="{% url 'products' %}?category=subscriptions">Subscriptions</a></div>
       </div>
     </header>
 
