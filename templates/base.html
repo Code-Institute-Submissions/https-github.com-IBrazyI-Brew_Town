@@ -24,6 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a00a21786b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -50,7 +51,24 @@
           <div class="col-1">
             <a href="{% url 'products' %}">All Products</a>
           </div>
-          <div class="col-1"><a href="{% url 'products' %}?category=tea_black,tea_earlygrey,tea_fruit,tea_herbal,tea_green,">Teas</a></div>
+          <div class="dropdown col-1">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Teas</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="{% url 'products' %}?category=tea_black">Black Teas</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?category=tea_earlgrey">Earl Grey</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?category=tea_rooibos">Redbush Teas</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?category=tea_fruit">Fruit Teas</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?category=tea_herbal">Herbal Teas</a></li>
+              <li><a class="dropdown-item" href="{% url 'products' %}?category=tea_green">Green Teas</a></li>
+            </ul>
+          </div>
+
+
+
+
+
+
+
           <div class="col-1"><a href="{% url 'products' %}?category=coffee_instant,coffee_ground,coffee_beans">Coffees</a></div>
           <div class="col-1"><a href="{% url 'products' %}?category=subscriptions">Subscriptions</a></div>
       </div>
