@@ -50,9 +50,9 @@
           <div class="col-1">
             <a href="{% url 'products' %}">All Products</a>
           </div>
-          <div class="col-1"><a href="{% url 'products' %}">Teas</a></div>
-          <div class="col-1">Coffees</div>
-          <div class="col-1">Subscriptions</div>
+          <div class="col-1"><a href="{% url 'products' %}?category=tea_black,tea_earlygrey,tea_fruit,tea_herbal,tea_green,">Teas</a></div>
+          <div class="col-1"><a href="{% url 'products' %}?category=coffee_instant,coffee_ground,coffee_beans">Coffees</a></div>
+          <div class="col-1"><a href="{% url 'products' %}?category=subscriptions">Subscriptions</a></div>
       </div>
     </header>
 
