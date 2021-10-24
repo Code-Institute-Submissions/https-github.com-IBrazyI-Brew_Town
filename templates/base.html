@@ -50,14 +50,18 @@
           <div class="col-1">
             <a href="{% url 'products' %}">All Products</a>
           </div>
-          <div class="col-1">Teas</div>
+          <div class="col-1"><a href="{% url 'products' %}">Teas</a></div>
           <div class="col-1">Coffees</div>
           <div class="col-1">Subscriptions</div>
       </div>
     </header>
 
     {% if messages %}
-      <div>Messages Here!</div>
+      <div class="cotainer">
+        <div class="row justify-content-center">
+        <div>Messages Here!</div>
+        </div>
+      </div>
     {% endif %}
 
     {% block content %}
@@ -67,7 +71,7 @@
     {% endblock %}
    
 
-    <footer class="container-fluid fixed-bottom">
+    <footer class="container-fluid">
       <div class="row">
         <div class="col">
           <h3>Social Media</h3>

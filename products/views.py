@@ -14,10 +14,10 @@ def view_all_products(request):
             query = request.GET['q']
         if not query:
             messages.error(request, "Please enter an item you would like to search.")
-            return redirect(reverse('product'))
+            return redirect(reverse('products'))
 
-            queries = Q(names__icontains=query) | Q(description__icontains=query)
-            products = products.filter(queries)
+        queries = Q(name__icontains=query) | Q(description__icontains=query)
+        products = products.filter(queries)
 
     products_all = {
         'products' : products,
