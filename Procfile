@@ -1,1 +1,1 @@
-web: gunicorn brew-town.wsgi
+web: gunicorn brew_town.wsgi
