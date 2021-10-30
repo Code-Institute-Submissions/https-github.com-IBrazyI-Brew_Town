@@ -11,7 +11,7 @@
     </div>
     <div class="row justify-content-start">
         {% for product in products %}
-        <div class="col col-md-4">
+        <div class="col col-md-4 mb-5">
             <img src="{{ product.image.url}}" alt="{{ product.name }}">
             <p>{{ product.name }}</p>
             <p>{{ product.rating }}/5<i class="fas fa-star"></i></p>
