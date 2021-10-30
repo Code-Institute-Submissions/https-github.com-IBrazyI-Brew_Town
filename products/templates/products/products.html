@@ -12,14 +12,16 @@
     <div class="row justify-content-start">
         {% for product in products %}
         <div class="col col-md-4 mb-5">
-            <img src="{{ product.image.url}}" alt="{{ product.name }}">
+            <a href="{% url 'product_details' product.id %}">
+                <img src="{{ product.image.url}}" alt="{{ product.name }}">
+            </a>
             <p>{{ product.name }}</p>
             <p>{{ product.rating }}/5<i class="fas fa-star"></i></p>
             <p>Quanity</p>
             <p>£{{ product.price }}</p>
             <button>Add to cart</button>
         </div>
-    {% endfor %}
+        {% endfor %}
     </div>
 </div>
 

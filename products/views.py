@@ -32,3 +32,14 @@ def view_all_products(request):
         }
 
     return render(request, 'products/products.html', products_all)
+
+def product_details(request, product_id):
+    """ Renders the product detail page """
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    context = {
+        'product' : product,
+    }
+
+    return render(request, 'products/product_details.html', context)
