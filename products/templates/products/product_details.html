@@ -12,12 +12,12 @@
         <p>{{ product.description }}</p>
         <p>{{ product.rating}}/5</p>
             <div class="col-6 offset-3">
-                <form method="POST">
+                <form method="POST" action="{% url 'add_to_bag' product.id %}">
                     {% csrf_token %}
                     <p>Quanity</p>
                     <input type="number" name="quanity" value="1" min="1" max="99" data-item-id="{{ product.id }}" id="id_qty_{{ product.id }}">
                     <input type="submit" value="Add to bag">
-                    <input type="hidden" name="redirect_url" value="{{ request.path }}"
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </form>
             </div>
         </div>
