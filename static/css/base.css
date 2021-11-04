@@ -9,3 +9,10 @@ background-blend-mode: normal, multiply;
     margin-bottom: 30px;  
 }
 
+.update-link {
+    cursor: pointer;
+}
+
+.remove-item {
+    cursor: pointer;
+}
