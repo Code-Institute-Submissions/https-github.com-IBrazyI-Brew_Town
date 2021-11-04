@@ -29,7 +29,9 @@ SECRET_KEY = 'django-insecure-%0&^44mwz0z*^z42_)d$u74bv=-+(3161m9w@4h!ih_)9y%4r7
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://brew-town.herokuapp.com/',
+    'brew-town.herokuapp.com/',
+    '127.0.0.1',
+    'localhost',
 ]
 
 
@@ -110,14 +112,17 @@ WSGI_APPLICATION = 'brew_town.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    #'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-       #'NAME': BASE_DIR / 'db.sqlite3',
-    #}
-}
-
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
