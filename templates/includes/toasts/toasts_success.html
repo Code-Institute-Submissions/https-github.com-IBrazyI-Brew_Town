@@ -1,11 +1,10 @@
-<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
     <div class="toast-header">
-      <img src="..." class="rounded me-2" alt="...">
-      <strong class="me-auto">Brewtown</strong>
-      <small>Success!</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      <strong class="toast-site-name">Brewtown</strong>
+      <small class="toast-type">Success!</small>
+      <button type="button" class="btn-close toast-close" data-dismiss="toast" aria-label="Close"></button>
     </div>
-    <div class="toast-body">
+    <div class="toast-body text-center">
       {{ message }}
     </div>
   </div>
