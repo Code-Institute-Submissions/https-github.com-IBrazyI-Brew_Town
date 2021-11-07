@@ -1,8 +1,12 @@
 /*ELEMENT STYLING*/
+
+html {
+    box-sizing: border-box;
+}
 body {
-background-color: #E4E4E1;
-background-image: radial-gradient(at top center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.03) 100%), linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(143,152,157,0.60) 100%);
-background-blend-mode: normal, multiply;
+    background-image: url(/media/brewtown-background.jpg);
+    background-size: cover;
+    background-position: center;
 font-family: 'Bitter', serif;   
 }
 
@@ -28,46 +32,59 @@ a:hover {
 .site-title {
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: black;
     text-transform: uppercase;
     font-family: 'Dosis', sans-serif;
     font-size: 50px;
     color: white;
 }
 
+.site-links-area {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0px;
+    color: white;
+}
+
+.site-link {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*Search Bar*/
+
+.search-bar-form {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px;
+}
 
 .search-bar {
     width: 100%;
-    padding: 15px 0px 15px 0px;
-    font-size: 30px;
-    
 }
 
 /*Profile and Bag Icons*/
 
-.profile-icon {
+.profile-bag {
+    margin-top: auto;
+    margin-bottom: auto;
     color: white;
-    font-size: 50px;
-}
-
-.bag-icon {
-    color: white;
-    font-size: 40px;
-}
-
-.bag-icon p {
     font-size: 20px;
 }
 
+.profile-icon {
+    font-size: 30px;
+}
 /*Product Navigation*/
 
 .product-links {
-    background-color: black;
     padding: 20px 0px 20px 0px;
 }
 
 /*FOOTER*/
+
+footer {
+    background-color: white;
+}
 
 .site-footer {
     padding-top: 30px;
@@ -89,9 +106,6 @@ a:hover {
 
 .calls-to-action {
     height: 100vh;
-    background-image: url(/media/brewtown-background.jpg);
-    background-size: cover;
-    background-position: center;
     padding-top: 15%;
 }
 
