@@ -39,7 +39,7 @@
   </head>
   <body>
     <header class="container-fluid">
-      <div class="row mb-2">
+      <div class="row top-nav">
         <div class="col-4 site-title text-center">
           <a href="{% url 'home' %}">
             <h1><i class="fas fa-mug-hot"></i>Brewtown.</h1>
@@ -48,20 +48,20 @@
         <div class="col-4 search-bar text-center">
           <form class="align-self-center" method="GET" action="{% url 'products' %}">
               <input class="border border-dark border-5 rounded" type="search" name="q" placeholder="Search our products" aria-label="Search">
-              <button class="btn btn-large" type="submit"><i class="fas fa-search"></i></button>
+              <button class="btn btn-light" type="submit"><i class="fas fa-search"></i></button>
           </form>
         </div>
-        <div class="dropdown col-2">
-          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Profile</a>
+        <div class="dropdown col-2 text-center profile-icon ">
+          <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-users"></i></a>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <li><a class="dropdown-item" href="">Login</a></li>
             <li><a class="dropdown-item" href="">Register</a></li>
           </ul>
         </div>
-        <div class="col-2">
+        <div class="col-2 bag-background text-center">
           <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-            <div class="text-center">
-                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+            <div class="bag-icon text-center">
+                <i class="fas fa-shopping-bag fa-lg"></i>
                 <p class="my-0">
                     {% if grand_total %}
                         £{{ grand_total|floatformat:2 }}

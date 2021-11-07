@@ -18,6 +18,11 @@ a:hover {
 
 /* Header Styles */
 
+.top-nav {
+    background-color: black;
+    margin-bottom: 0px;
+}
+
 /*Title*/
 
 .site-title {
@@ -41,7 +46,25 @@ a:hover {
 
 /*Profile and Bag Icons*/
 
+.profile-icon {
+    color: white;
+    font-size: 50px;
+}
+
+.bag-icon {
+    color: white;
+    font-size: 40px;
+}
+
+.bag-icon p {
+    font-size: 20px;
+}
+
+/*Product Navigation*/
+
 .product-links {
+    background-color: black;
+    padding: 20px 0px 20px 0px;
     margin-bottom: 30px;  
 }
 
