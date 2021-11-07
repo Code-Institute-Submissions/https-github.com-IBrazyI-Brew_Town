@@ -65,9 +65,17 @@ a:hover {
 .product-links {
     background-color: black;
     padding: 20px 0px 20px 0px;
-    margin-bottom: 30px;  
 }
 
+/*Home*/
+.calls-to-action {
+    height: 100vh;
+    background-image: url(/media/brewtown-background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Shopping Bag */
 .update-link {
     cursor: pointer;
 }
@@ -76,6 +84,7 @@ a:hover {
     cursor: pointer;
 }
 
+/* Toasts */
 .toast-site-name {
     margin-right: 30px;
 }
