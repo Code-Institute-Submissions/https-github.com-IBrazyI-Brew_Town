@@ -3,21 +3,27 @@
 
 {% block content %}
 <div class="container-fluid calls-to-action">
-    <div class="row align-items-center justify-content-center text-center">
-        <div class="col-4">
-            <h2>Try somthing new?</h2>
-            <p>Bored of wating for the kettle to boil? Try our new Cold Brews, for people on the move!</p>
-            <button>Cold Brew!</button>
+    <div class="row justify-content-around text-center">
+        <div class="card home-card col-3">
+            <div class="card-body">
+              <h5 class="card-title">Want to try somthing new?</h5>
+              <p class="card-text">Why not try out our new cold brews. The same quality teas that you can enjoy even without hot water or on a hot summers day.</p>
+              <a href="{% url 'products' %}?category=subscriptions" class="btn btn-secondary">Cold Brews!</a>
+            </div>
         </div>
-        <div class="col-4">
-            <h2>First Time?</h2>
-            <p>Create an account, browse and pick from the best tasting teas on the market.</p>
-            <button><a href="">Sign Up!</a></button>
+        <div class="card home-card col-3">
+            <div class="card-body">
+              <h5 class="card-title">First time?</h5>
+              <p class="card-text">Create an account, browse and pick from the best tasting teas on the market.</p>
+              <a href="#" class="btn btn-secondary">Sign Up!</a>
+            </div>
         </div>
-        <div class="col-4">
-            <h2>Tea Addict?</h2>
-            <p>Sign up to our subscription service and get the best teas delivired to your door every month!</p>
-            <a href="{% url 'products' %}?category=subscriptions"><button>Subscribe!</button></a>
+        <div class="card home-card col-3">
+            <div class="card-body">
+              <h5 class="card-title">Tea Addict?</h5>
+              <p class="card-text">Sign up to our subscription service and get the best teas delivired to your door every month!</p>
+              <a href="{% url 'products' %}?category=subscriptions" class="btn btn-secondary">Subscribe!</a>
+            </div>
         </div>
     </div>
 </div>
