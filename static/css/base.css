@@ -116,21 +116,13 @@ footer {
 }
 
 .home-card {
-    background-color: rgba(255, 255, 255, 0.219);
+    background-color: rgba(230, 230, 230, 0.637);
     padding: 30px 20px 30px 20px;
-    border: 3px solid black;
+    border: 2px solid black;
 }
 
-/* Shopping Bag */
-.update-link {
-    cursor: pointer;
-}
 
-.remove-item {
-    cursor: pointer;
-}
-
-/* Toasts */
+/* TOASTS */
 .toast-site-name {
     margin-right: 30px;
 }
@@ -149,4 +141,26 @@ footer {
 
 .product-add{
     margin-top: 1rem;
+}
+
+/* PRODUCT DETAILS */
+
+.product-details-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* SHOPPING BAG */
+
+.shopping-bag-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.update-link {
+    cursor: pointer;
+}
+
+.remove-item {
+    cursor: pointer;
 }
