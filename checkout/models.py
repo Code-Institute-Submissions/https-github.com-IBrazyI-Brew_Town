@@ -1,6 +1,10 @@
+import uuid
+
 from django.conf import settings
 from django.db import models
 from django.db.models import Sun
+
+from products.models import Product
 
 
 class Order(models.Model):
@@ -20,3 +24,10 @@ class Order(models.Model):
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
 
+
+class OrderItem(models.Model):
+    """ Will be made for each item within the shopping bag then attached to the order itself """
+    order = models.ForeignKey(Order, null=false, blank=False, on_delete=models.CASCADE, related_name='items')
+    product = models.ForeignKey(Product, null=false, blank=False, on_delete=models.CASCADE)
+    quantity = models.IntegerField(null=False, blank=False, default=0)
+    item_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
