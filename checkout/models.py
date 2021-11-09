@@ -2,7 +2,7 @@ import uuid
 
 from django.conf import settings
 from django.db import models
-from django.db.models import Sun
+from django.db.models import Sum
 
 from products.models import Product
 
@@ -51,8 +51,8 @@ class Order(models.Model):
 
 class OrderLineItem(models.Model):
     """ Will be made for each item within the shopping bag then attached to the order itself """
-    order = models.ForeignKey(Order, null=false, blank=False, on_delete=models.CASCADE, related_name='lineitems')
-    product = models.ForeignKey(Product, null=false, blank=False, on_delete=models.CASCADE)
+    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
+    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     item_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
@@ -61,5 +61,5 @@ class OrderLineItem(models.Model):
         self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
 
-        def __str__(self):
-            return f'SKU {self.product.sku} on order {self.order.order_number}'
+    def __str__(self):
+        return f'SKU {self.product.sku} on order {self.order.order_number}'
