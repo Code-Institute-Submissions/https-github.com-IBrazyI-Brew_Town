@@ -1,10 +1,12 @@
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
-    <div class="toast-header">
-      <strong class="toast-site-name">Brewtown</strong>
-      <small class="toast-type">Success!</small>
-      <button type="button" class="btn-close toast-close" data-dismiss="toast" aria-label="Close"></button>
+    <div class="toast-header bg-success text-black">
+      <strong class="mr-auto">Brewtown</strong>
+      <small class="mr-auto text-green">Success!</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
-    <div class="toast-body text-center">
+    <div class="toast-body">
       {{ message }}
     </div>
   </div>

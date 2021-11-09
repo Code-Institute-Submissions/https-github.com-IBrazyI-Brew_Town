@@ -92,18 +92,25 @@
           </a>
         </div>
       </div>
-      <div class="row justify-content-left product-links">
-
-      </div>
     </header>
 
-    <div class="toast-container">
-      {% if messages %}
-          {% for message in messages %}
-            {% include 'includes/toasts/toasts_success.html' %}
-          {% endfor %}
-      {% endif %} 
-    </div>
+    {% if messages %}
+        <div class="toast-container">
+            {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toasts_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toasts_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toasts_success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toasts_info.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
+    {% endif %}
 
     {% block page_header %}
     {% endblock %}
