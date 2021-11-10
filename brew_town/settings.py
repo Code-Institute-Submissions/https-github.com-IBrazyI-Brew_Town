@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'crispy_forms'
     'home',
     'products',
     'shopping_bag',
@@ -67,6 +68,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'brew_town.urls'
 
+CRISPY_TEMPLATE_PACK = 'boostrap4'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -83,6 +86,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'shopping_bag.contexts.shopping_bag_contents',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
