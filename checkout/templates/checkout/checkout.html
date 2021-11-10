@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+
+    <div class="container shopping-bag-container text-center">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <h2>Shopping Bag</h2>
+            </div>
+        </div>
+        <div class="">
+            <div class="col-6 offset-3">
+                <p>Please fill out the form to complete your order</p>
+            </div>
+        </div>
+
+{% endblock %}

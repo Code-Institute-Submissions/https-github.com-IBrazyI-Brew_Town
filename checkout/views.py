@@ -8,7 +8,7 @@ def checkout(request):
     bag = request.session.get('bag', {})
     if not bag:
         messages.error(request, "Your bag is empty.")
-        return redirect(reverse('proudcts'))
+        return redirect(reverse('products'))
     
     order_form = OrderForm()
     template = 'checkout/checkout.html'
