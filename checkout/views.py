@@ -4,6 +4,7 @@ from django.contrib import messages
 from .forms import OrderForm
 
 def checkout(request):
+    """  Checks if the is a user bag, creates order form and renders the template for the checkout page """
     bag = request.session.get('bag', {})
     if not bag:
         messages.error(request, "Your bag is empty.")
