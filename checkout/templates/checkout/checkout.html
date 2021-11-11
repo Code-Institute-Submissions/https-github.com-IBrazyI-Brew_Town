@@ -26,7 +26,7 @@
         {% for item in bag_items %}
             <div class="row">
                 <div class="col-2">
-                    <a href="{% url 'product-detail' item.product.id %}">
+                    <a href="{% url 'product_details' item.product.id %}">
                         {% if item.product.image %}
                             <img class="w-100" src="{{ item.proudct.img.url }}" alt="{{ product.name }}">
                         {% else %}
@@ -38,7 +38,7 @@
                     <p>{{ item.quantity }}</p>
                 </div>
                 <div class="col-3">
-                    <p>£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                    <p>£{{ item.subtotal }}</p>
                 </div>
             </div>
         {% endfor %}
@@ -63,8 +63,8 @@
                     {% csrf_token %}
                     <fieldset>
                         <legend class="fieldset-label">Details</legend>
-                        {{ order_form_full.name | as_crispy_field }}
-                        {{ order_form_full.email | as_crispy_field }}
+                        {{ order_form.full_name | as_crispy_field }}
+                        {{ order_form.email | as_crispy_field }}
                     </fieldset>
                     <fieldset>
                         <legend class="fieldset-label">Delivery</legend>
