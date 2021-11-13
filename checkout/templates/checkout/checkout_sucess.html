@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Thankyou!</h2>
+                <p>Your order has been processed.</p>
+                <p>A conformation email has been sent to{order.email}.</p>
+                <button class="btn btn-secondary" href="{% url 'products' %}">Return to store</button>
+            </div>
+        </div>
+{% endblock %}
