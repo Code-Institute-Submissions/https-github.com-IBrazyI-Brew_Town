@@ -179,9 +179,12 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
+#Stripe
 FREE_DELIVERY_THRESHOLD = 30
 STANDARD_DELIVERY_PERCENTAGE = 10
+STRIPE_CURRENCY = 'gbp'
+STRIPE_PUBLIC_KEY = 'pk_test_51JvI9LCvO1HFcJuqLIh1e86ReRsh578qtLAC1VnCIoEKs7fov6fBA3UfkWeL9P7u6ZxFkORn7V82qQoJBh6mM92p008fnSG9NE'
+STRIPE_SECRET_KEY = 'sk_test_51JvI9LCvO1HFcJuqf1V8jYVJtOcN5K78LjFxQ2UkoOdfFZtycYz2TUqExNmTQoIba5HRAFBW9UB5g8eWs9KbDoEj008yYOVHkH'
 
 
 # Default primary key field type
