@@ -35,7 +35,7 @@ def checkout(request):
         bag = request.session.get('bag', {})
 
         form_data = {
-            'full.name': request.POST['full_name'],
+            'full_name': request.POST['full_name'],
             'email': request.POST['email'],
             'phone_number': request.POST['phone_number'],
             'street_address1': request.POST['street_address1'],
@@ -48,7 +48,9 @@ def checkout(request):
 
         order_form = OrderForm(form_data)
         if order_form.is_valid():
+            print("Form valid")
             order = order_form.save(commit=False)
+            print("PID", request.POST.get('client_secret'))
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
@@ -74,6 +76,7 @@ def checkout(request):
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
+            print("Form not valid", order_form.errors)
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
