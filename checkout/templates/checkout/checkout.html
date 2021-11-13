@@ -52,7 +52,7 @@
             <div class="col-3">
                 <p class="my-0">£{{ total | floatformat:2 }}</p>
                 <p class="my-0">£{{ delivery | floatformat:2 }}</p>
-                <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
             </div>
         </div>
     </div>
@@ -111,8 +111,8 @@
 {% endblock %}
 
 {% block postloadjs %}
-        {{ block.super }}
-        {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-        {{ client_secret|json_script:"id_client_secret" }} 
-        <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }} 
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
