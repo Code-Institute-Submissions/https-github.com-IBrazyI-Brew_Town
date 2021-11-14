@@ -1,0 +1,19 @@
+Hello {{order.full_name}}!
+
+We are happy to have recived your order and we get to work shipping it to you right away!
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.order_date }}
+
+Order Total: £{{ order.grand_total }}
+
+Shipping Address: {{ order.street_address1 }}
+                  {{ order.town_or_city }}
+                  {{ order.postcode }}
+                  {{ order.country }}
+
+If you have any issues please email us at {{ contact_email }}.
+
+Thanks,
+
+Brewtown.
