@@ -14,11 +14,11 @@
 
     {% block corecss %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/css/base.css" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/base.css" type="text/css">
     {% endblock %}
 
     {% block extra_css %}
@@ -41,13 +41,13 @@
   <body>
     <header class="container-fluid">
       <div class="row top-nav">
-        <div class="col-2 site-title">
+        <div class="col-sm-8 col-md-6 col-lg-2 site-title">
           <a href="{% url 'home' %}">
             <h1><i class="fas fa-mug-hot"></i>Brewtown.</h1>
           </a>
         </div>
 
-        <div class="col-3 site-links-area justify-content-space-around">
+        <div class="col-sm-12 col-md-6 col-lg-3 site-links-area justify-content-space-around">
           <a class="col" href="{% url 'products' %}">All Products</a>
           <a class=" col dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Tea</a>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -67,13 +67,13 @@
           <a class="col" href="{% url 'products' %}?category=subscriptions">Subscriptions</a>
         </div>
 
-        <div class="col-5 search-bar-form">
+        <div class="col-sm-12 col-md-6 col-lg-5 search-bar-form">
           <form method="GET" action="{% url 'products' %}">
               <input class="search-bar border border-white border-5" type="search" name="q" placeholder="Search our products." aria-label="Search">
           </form>
         </div>
 
-        <div class="col-1 text-center profile-bag">
+        <div class="col text-center profile-bag">
           <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"><i class="profile-icon fas fa-users"></i></a>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             {% if request.user.is_authenticated %}
@@ -86,10 +86,9 @@
               <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
               <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
             {% endif %}
-
           </ul>
         </div>
-        <div class="col-1 text-center profile-bag">
+        <div class="col text-center profile-bag">
           <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %}" href="{% url 'view_bag' %}">
             <i class="fas fa-shopping-bag fa-lg"></i>
             <p class="my-0">
