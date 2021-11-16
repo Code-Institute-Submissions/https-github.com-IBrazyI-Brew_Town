@@ -4,7 +4,7 @@ html {
     box-sizing: border-box;
 }
 body {
-    font-family: 'Bitter', serif;   
+    font-family: 'Bitter', serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -101,6 +101,7 @@ a:hover {
         padding-right: 0px;
     }
 
+}
 @media (max-width: 810px) {
 
     .site-title h1 {
@@ -127,11 +128,6 @@ a:hover {
     }
 }
 
-
-
-
-
-}
 
 /*FOOTER*/
 
@@ -166,7 +162,8 @@ footer {
     background-image: url(/media/brewtown-background.jpg);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
     padding-top: 15%;
 }
 

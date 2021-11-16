@@ -53,6 +53,9 @@ def product_management(request):
     if not request.user.is_superuser:
         return redirect(reverse('home'))
 
+    if request.method == 'POST':
+        form = SelectProductForm(request.POST, request.FILES)
+
     template = 'products/product_management.html'
 
     return render(request, template)
