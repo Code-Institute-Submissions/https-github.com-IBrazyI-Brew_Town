@@ -46,6 +46,12 @@ def product_details(request, product_id):
     return render(request, 'products/product_details.html', context)
 
 
+def product_management(request):
+    """ Renders the product management page, where the store owners will be able to select from, add edit and removal of products """
+    template = 'products/product_management.html'
+
+    return render(request, template)
+
 def add_product(request):
     "Add a product to the store without using the admin page"
     if request.method == 'POST':
