@@ -31,7 +31,9 @@
                         <tr>
                             <tr>
                             <td class="p-3 w-25">
-                                <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                {% if item.prodcut.image %}
+                                    <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                {% endif %}
                             </td>
                             <td class="py-3">
                                 <p class="my-0">{{ item.product.name }}</p>
