@@ -115,7 +115,7 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-EMAIL_BACKEND = os.environ['EMAIL_BACKEND']
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = os.environ['EMAIL_HOST']
 EMAIL_USE_TLS = os.environ['EMAIL_USE_TLS']
 EMAIL_PORT = os.environ['EMAIL_PORT']
