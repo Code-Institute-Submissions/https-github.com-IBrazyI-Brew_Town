@@ -3,7 +3,7 @@ from .models import Post
 
 class PostList(TemplateView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')
-    template_name = 'reviews.html'
+    template_name = 'posts.html'
 
 class PostDetail(TemplateView):
     model = Post
