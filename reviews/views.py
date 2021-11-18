@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
-def poll(request):
-    template = 'poll/poll.html'
+def reviews(request):
+    template = 'reviews/reviews.html'
     return render(request, template)
