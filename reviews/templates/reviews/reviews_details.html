@@ -3,15 +3,44 @@
 {% block content %}
 
 <div class="container">
-    <div class="row">
-      <div class="col-md-8 card mb-4  mt-3 left  top">
-        <div class="card-body">
-          <h1>{{ review.slug }}</h1>
-          <p class=" text-muted">{{ review.author }} | {{ review.created_on }}</p>
-          <p class="card-text ">{{ review.content | safe }}</p>
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 left  top">
+      <div class="card-body">
+        <h1>{{ review.title }}</h1>
+        <p class=" text-muted">{{ review.author }} | {{ review.created_on }}</p>
+        <p class="card-text ">{{ review.content | safe }}</p>
+      </div>
+    </div>
+    <div class="col-md-8 card mb-4  mt-3 ">
+      <div class="card-body">
+        <!-- comments -->
+        <h2>{{ comment.count }} comments</h2>
+        {% for comments in comment %}
+        {% for comment in comments %}
+        <div class="comments" style="padding: 10px;">
+          <p class="font-weight-bold">
+            {{ comments.user}}
+            <span class=" text-muted font-weight-normal">
+              {{ comment.created_on }}
+            </span>
+          </p>
+          {{ comment.body | linebreaks }}
         </div>
+        {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-md-8 card mb-4  mt-3 ">
+      <div class="card-body">
+        <h3>Leave a comment</h3>
+        <form method="post" style="margin-top: 1.3em;">
+          {{ comment_form | crispy }}
+          {% csrf_token %}
+          <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+        </form>
       </div>
     </div>
   </div>
+</div>
 
 {% endblock %}
