@@ -9,7 +9,7 @@ STATUS = (
 
 class Review(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=80, unique=True)
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='review_posts')
     updated_on = models.DateTimeField(auto_now= True)
     content = models.TextField()
@@ -23,12 +23,11 @@ class Review(models.Model):
         return self.title
 
 
-class Comment(models.Model):
+class Comments(models.Model):
     review = models.ForeignKey(Review,on_delete=models.CASCADE,related_name='comments')
-    username = User.username
-    body = models.TextField()
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
+    body = models.TextField(default='', null=True)
     created_on = models.DateTimeField(auto_now_add=True)
-    active = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['created_on']
