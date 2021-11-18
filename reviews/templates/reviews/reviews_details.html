@@ -6,9 +6,9 @@
     <div class="row">
       <div class="col-md-8 card mb-4  mt-3 left  top">
         <div class="card-body">
-          <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
+          <h1>{{ review.slug }}</h1>
           <p class=" text-muted">{{ review.author }} | {{ review.created_on }}</p>
-          <p class="card-text ">{{ object.content | safe }}</p>
+          <p class="card-text ">{{ review.content | safe }}</p>
         </div>
       </div>
     </div>
