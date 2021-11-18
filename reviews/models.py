@@ -23,7 +23,7 @@ class Review(models.Model):
         return self.title
 
 
-class Comments(models.Model):
+class Comment(models.Model):
     review = models.ForeignKey(Review,on_delete=models.CASCADE,related_name='comments')
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     body = models.TextField(default='', null=True)
@@ -33,4 +33,4 @@ class Comments(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return 'Comment {} by {}'.format(self.body, self.name)
+        return 'Comment {} by {}'.format(self.body, self.user)
