@@ -2,6 +2,22 @@
 
 {% block content %}
 
-<h1>hello</h1>
+<div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8 mt-3 left">
+            {% for review in reviews %}
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">{{ review.title }}</h2>
+                    <p class="card-text text-muted h6">{{ review.author }} | {{ review.created_on}} </p>
+                    <p class="card-text">{{review.content|slice:":200" }}</p>
+                    <a href="{% url 'reviews_details' review.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
 {% endblock %}
