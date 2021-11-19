@@ -34,12 +34,14 @@ with very little imput needed from the user to get what they want.
 - I want to site to work on all screen sizes depending on what device I use.
 
 #### A Returning User
-
-
-
+- I want to be able to log into the site and see what I have previousley ordered.
+- I want to be able to find the products I like quickley with a search function.
+- I want to be able to leave a review of the company,products and my customer experince.
+- I want to be able to access the companys social media to share with my freinds and family.
 
 ### Strategy
-
+- The aim of the site is to be an easy to access and use E-commerce store.
+- The site allows users to purchase items, log into thier own account and leave comments.
 
 ### Scope
 
