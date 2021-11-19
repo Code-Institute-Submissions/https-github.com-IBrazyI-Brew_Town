@@ -5,12 +5,8 @@ from .forms import CommentForm
 def reviews(request):
     reviews = Review.objects.filter(status=1).order_by('-created_on')
 
-    context = {
-        'reviews': reviews,
-    }
-
     template = 'reviews/reviews.html'
-    return render(request, template, context)
+    return render(request, template, {'reviews':reviews})
 
 
 def reviews_details(request, slug):
