@@ -25,12 +25,14 @@ class Review(models.Model):
 
 class Comment(models.Model):
     review = models.ForeignKey(Review,on_delete=models.CASCADE,related_name='comments')
-    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
-    body = models.TextField(default='Enter your comment here!', null=True)
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['created_on']
 
     def __str__(self):
-        return 'Comment {} by {}'.format(self.body, self.user)
+        return 'Comment {} by {}'.format(self.body, self.name)

@@ -10,9 +10,12 @@ class ReviewAdmin(admin.ModelAdmin):
 admin.site.register(Review, ReviewAdmin)
 
 
+@admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('review', 'user', 'body', 'created_on')
-    list_filter = ('created_on',)
-    search_fields = ('review', 'user', 'body')
-    
-admin.site.register(Comment, CommentAdmin)
+    list_display = ('name', 'body', 'review', 'created_on', 'active')
+    list_filter = ('active', 'created_on')
+    search_fields = ('name', 'email', 'body')
+    actions = ['approve_comments']
+
+    def approve_comments(self, request, queryset):
+        queryset.update(active=True)

@@ -13,19 +13,9 @@ def reviews(request):
     return render(request, template, context)
 
 
-def ReviewsDetails(request, slug):
+def reviews_details(request, slug):
+    template_name = 'reviews/reviews_details.html'
     review = get_object_or_404(Review, slug=slug)
-
-    context = {
-        'review':review
-    }
-
-    template = 'reviews/reviews_details.html'
-    return render(request, template, context)
-
-def reviews_detail(request, slug): 
-    template = 'reviews_details.html'
-    review = get_object_or_404(Post, slug=slug)
     comments = review.comments.filter(active=True)
     new_comment = None
     # Comment posted
@@ -36,16 +26,13 @@ def reviews_detail(request, slug):
             # Create Comment object but don't save to database yet
             new_comment = comment_form.save(commit=False)
             # Assign the current post to the comment
-            new_comment.post = post
+            new_comment.review = review
             # Save the comment to the database
             new_comment.save()
     else:
         comment_form = CommentForm()
 
-    context = {'review': review,
-                'comments': comments,
-                'new_comment': new_comment,
-                'comment_form': comment_form
-    }
-
-    return render(request, template, context )
+    return render(request, template_name, {'review': review,
+                                           'comments': comments,
+                                           'new_comment': new_comment,
+                                           'comment_form': comment_form})
