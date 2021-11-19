@@ -5,6 +5,8 @@
 [Visit My Site Here](https://the-drunken-goblin.herokuapp.com/)
 
 ## Overview
+Brewtown is a E-Commerce site dedictated to the selling of tea and coffee. With a simple layout and easy navigation it is designed to let the products do the talking,
+with very little imput needed from the user to get what they want.
 
 ## Table of Contents
 
@@ -78,19 +80,17 @@
 ## Technologies Used
 
 ### Languages
-- Python/Flask- Used to create all functionality of the site, all pages are rendered using flask methods.
+- Python/Django- Used to create all functionality of the site, all pages are rendered using django.
     - Flask has also been used to connect the site to the Mongo.DB database, where all information is stored and accessed from.
 - HTML- Used for all template pages for the site and then rendered using Flask. Also used for the basic form structure and validation.
-- CSS- Mostly used in conjunction with the Materialize CSS library to style and structure all the pages.
-- Javascript- Used via JQuery and use to activate the Materialize CSS drop down selectors.
+- CSS- Mostly used in conjunction with the Boostrap CSS library to style and structure all the pages.
 ### Programs
-- VS Code: Where all coding took place.
+- Git Pod: Used as it creates it's own vitrual env.
 - Balsamic: Used to create wireframes.
 - Heroku: Used to deploy the site for public use.
 - Git Hub: Used to host the websites repository.
 - Git Hub Desktop: Used to access the repository linking it to online Git Hub profile.
 - IAmResponsive: Used to test responsiveness of site.
-- Coolors: Used to display colour pallet used.
 - [HTML Validator](https://validator.w3.org/) - Used to check HTML code for errors.
 - [CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to check CSS code for errors.
 - [Python Validator](https://extendsclass.com/python-tester.html) - Used to check Python code for errors.
@@ -102,7 +102,7 @@
 - Python ![Python Validation](/static/images/pythonchecker.jpg)
 - HTML ![HTML Validation](/static/images/htmlchecker.jpg)
 - CSS ![CSS Validation](/static/images/cssvalidator.jpg)
-    - Only errors to show are with Materialise Library.
+
 
 
 ### Bugs
