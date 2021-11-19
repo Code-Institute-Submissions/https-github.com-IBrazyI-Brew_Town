@@ -11,13 +11,8 @@
 
 <div class="container">
     <div class="row">
-        <div class="col text-center">
+        <div class="col text-center mt-5 mb-5">
             <h2>Welcome to your profile {{ profile.user }}</h2>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col text-center">
-            This will be our saved products and any reviews we have done!
         </div>
     </div>
     <div class="row">
@@ -26,7 +21,7 @@
             <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn-secondary">Update Info</button>
+                <button class="btn btn-outline-dark">Update Info</button>
             </form>
         </div>
         <div class="col-12 col-lg-6">
