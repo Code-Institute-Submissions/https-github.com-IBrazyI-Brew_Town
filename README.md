@@ -27,7 +27,11 @@ with very little imput needed from the user to get what they want.
 ## UX
 ### User Stories
 #### A First Time Visitor
-
+- I want to be able to navigate the site easily and understand what it is for.
+- I want to be able to browse for products I would like to buy.
+- I want to be able to buy products without logging in.
+- I want to see a wide range of products displayed in an easy to see format.
+- I want to site to work on all screen sizes depending on what device I use.
 
 #### A Returning User
 

@@ -44,13 +44,12 @@
                     </div>
 
                     <div class="col{% if s %}-12 mt-2{% endif %}">
-                        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0">
-                            <span class="icon">
-                                <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="text-uppercase">Keep Shopping</span>
+                        <a href="{% url 'products' %}" class="btn btn-outline-dark ">
+                            Back to store
                         </a>
                         <input type="submit" class="btn btn-secondary product-add" value="Add to Bag">
+                        <a class="btn btn-outline-dark" href="{% url 'edit_product' %}"> Edit </a>
+                        <a class="btn btn-outline-dark" href="{% url 'delete_product' %}">Delete</a>
                     </div>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </div>

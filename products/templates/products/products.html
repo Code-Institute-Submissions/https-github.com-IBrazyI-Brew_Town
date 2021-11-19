@@ -62,10 +62,6 @@
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </form>
-                        <div class="col-12 mt-2 text-center">
-                            <a class="btn btn-lg btn-warning" href="{% url 'edit_product' product.id %}">Edit</a>
-                            <a class="btn btn-lg btn-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                        </div>
                     </div>
                 </div>
             </div>
