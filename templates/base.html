@@ -64,7 +64,7 @@
             <li><a class="dropdown-item" href="{% url 'products' %}?category=coffee_ground">Ground Coffee</a></li>
             <li><a class="dropdown-item" href="{% url 'products' %}?category=coffee_beans">Coffee Beans</a></li>
           </ul>
-          <a class="col" href="{% url 'products' %}?category=subscriptions">Subscriptions</a>
+          <a class="col" href="{% url 'products' %}?category=subscriptions">Bundles</a>
         </div>
 
         <div class="col-sm-12 col-md-6 col-lg-5 search-bar-form">
@@ -166,12 +166,11 @@
           <h3 class="footer-title">Want to see what we're up too?</h3>
           <hr>
           <p>Sign up to the Brew Town newsletter.</p>
-          <form>
-            <input class="newsletter-signup search-bar border border-dark border-5" type="email" placeholder="Enter your email.">
+          <form method="GET" action="{% url 'newsletter_email' %}">
+            <input class="newsletter-signup search-bar border border-dark border-5" type="email" name="email" placeholder="Enter your email.">
           </form>
         </div>
       </div>
     </footer>
-    
   </body>
 </html>
