@@ -27,10 +27,7 @@
             <div class="row">
                 <div class="col-2">
                     <a href="{% url 'product_details' item.product.id %}">
-                        {% if item.product.image %}
-                            <img class="w-100" src="{{ item.proudct.img.url }}" alt="{{ product.name }}">
-                        {% else %}
-                        {% endif %}
+                        <img class="w-100" src="{{ item.product.image_url }}" alt="{{ product.name }}">
                     </a>
                 </div>
                 <div class="col-7">
@@ -78,7 +75,8 @@
                         <div class="form-check">
                             {% if user.is_authenticated %}
                                 <label class="form-check-label">Save delivery info to profile</label>
-                                <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
+                                <input class="form-check-input ml-5" type="checkbox" id="id-save-info" name="save-info" checked>
+                                <hr>
                             {% else %}
                                 <label class="form-check-label" for="id-save-info">
                                     <a class="text-info" href="{% url 'account_signup' %}" >Create Account</a> or
@@ -88,7 +86,7 @@
 
                         </div>
                     </fieldset> 
-                    <fieldset>
+                    <fieldset class="mb-3">
                         <legend class="fieldset-label">Payment Details</legend>
                         <!-- Stripe card element -->
                         <div id="card-element"></div>
@@ -99,8 +97,8 @@
                     </fieldset> 
                     
                     <div class="submit-button">
-                        <a class="btn btn-secondary" href="{% url 'view_bag' %}">Adjust Bag</a>
-                        <button id="submit-button" class="btn btn-secondary">Complete Order</button>
+                        <a class="btn btn-outline-dark" href="{% url 'view_bag' %}">Adjust Bag</a>
+                        <button id="submit-button" class="btn btn-outline-dark">Complete Order</button>
                         <p>
                             <span>£{{ grand_total|floatformat:2 }} Will be taken from your account.</span>
                         </p>
