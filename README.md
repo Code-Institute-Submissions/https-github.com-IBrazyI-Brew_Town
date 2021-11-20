@@ -111,6 +111,7 @@ Two different fonts have been selected for use on this site. Both fonts have bee
 - Implementation of a subscription service also using stripe.
 - Saved products within the user profile.
 - Other payment options.
+- Working, user defined star rating for products.
 
 <a name="technologies"></a>
 
