@@ -5,8 +5,8 @@
 [Visit My Site Here](https://the-drunken-goblin.herokuapp.com/)
 
 ## Overview
-Brewtown is a E-Commerce site dedictated to the selling of tea and coffee. With a simple layout and easy navigation it is designed to let the products do the talking,
-with very little imput needed from the user to get what they want.
+Brewtown is an e-commerce site dedicated to the selling of tea and coffee. With a simple layout and easy navigation, it is designed to let the products do the talking,
+with very little input needed from the user to get what they want.
 
 ## Table of Contents
 
@@ -30,23 +30,23 @@ with very little imput needed from the user to get what they want.
 - I want to be able to navigate the site easily and understand what it is for.
 - I want to be able to browse for products I would like to buy.
 - I want to be able to buy products without logging in.
-- I want to see a wide range of products displayed in an easy to see format.
-- I want to site to work on all screen sizes depending on what device I use.
+- I want to see a wide range of products displayed in an easy-to-see format.
+- I want the site to work on all screen sizes, depending on what device I use.
 
 #### A Returning User
-- I want to be able to log into the site and see what I have previousley ordered.
-- I want to be able to find the products I like quickley with a search function.
-- I want to be able to leave a review of the company,products and my customer experince.
-- I want to be able to access the companys social media to share with my freinds and family.
+- I want to be able to login to the site and see what I have previously ordered.
+- I want to be able to find the products I like quickly with a search function.
+- I want to be able to leave a review of the company, products and my customer experience.
+- I want to be able to access the company's social media to share with my friends and family.
 
 ### Strategy
-- The aim of the site is to be an easy to access and use E-commerce store.
-- The site allows users to purchase items, log into thier own account and leave comments.
+- The aim of the site is to be an e-commerce store which is easy to access and use. 
+- The site allows users to purchase items, log into their own account and leave comments.
 
 ### Scope
-- Provide an easy to navigate, easy to use E-Commmerce site.
-- Allow users to search for specific products within the database. Also search specific types of products.
-- Provide users a space to add thier feedback to the website/products.
+- Provide an easy to navigate, easy to use e-commmerce site.
+- Allow users to search for specific products within the database, and search specific types of products.
+- Provide users a space to add their feedback to the website/products.
 
 ### Structure
 #### Interaction Design
@@ -57,9 +57,9 @@ with very little imput needed from the user to get what they want.
 
 
 #### Information Architecture
-- Create a products page that have clear distinctions between products.
+- Create a products page that has clear distinctions between products.
 - Content is spaced well and easy to read.
-- Forms are created in a such a way that they are logical and not confusing even to first time users.
+- Forms are created in a such a way that they are logical and not confusing, even to first time users.
 
 ### Skeleton
 #### Wireframes
@@ -70,10 +70,10 @@ with very little imput needed from the user to get what they want.
 ![Wireframes](/static/wireframes/pc4.png)
 
 #### Information Design
-- Info boxes within the home page are large, well spaced with clear text.
+- Information boxes within the home page are large, well spaced with clear text.
 - The footer is split into 3 clear sections.
-- Product cards are informative, simple and contain all info the user will require.
-- Product details are enhanced and more clear when a singular product is visable.
+- Product cards are informative, simple and contain all information the user will require.
+- Product details are enhanced and more clear when a singular product is visible.
 
 #### Interface Design
 
@@ -107,7 +107,7 @@ with very little imput needed from the user to get what they want.
 - HTML- Used for all template pages for the site and then rendered using Flask. Also used for the basic form structure and validation.
 - CSS- Mostly used in conjunction with the Boostrap CSS library to style and structure all the pages.
 ### Programs
-- Git Pod: Used as it creates it's own vitrual env.
+- Git Pod: Used as it creates it's own virtual environment.
 - Balsamic: Used to create wireframes.
 - Heroku: Used to deploy the site for public use.
 - Git Hub: Used to host the websites repository.
