@@ -5,22 +5,18 @@
 <div class="container">
     <div class="row">
         <!-- Blog Entries Column -->
-        <div class="col-md-8 mt-3 left">
-            {% if reviews %}
-                {% for review in reviews %}
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h2 class="card-title">{{ review.title }}</h2>
-                        <p class="card-text text-muted h6">{{ review.author }} | {{ review.created_on}} </p>
-                        <p class="card-text">{{review.content|slice:":200" }}</p>
-                        <a href="{% url 'reviews_details' review.slug  %}" class="btn btn-outline-dark">Read More &rarr;</a>
-                    </div>
+        <div class="col mt-3 mb-5">
+            {% for review in reviews %}
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">{{ review.title }}</h2>
+                    <p class="card-text text-muted h6">{{ review.author }} | {{ review.created_on}} </p>
+                    <p class="card-text">{{review.content|slice:":200" }}</p>
+                    <a href="{% url 'reviews_details' review.slug  %}" class="btn btn-outline-dark">Read More &rarr;</a>
                 </div>
-                {% endfor %}
-            {% else %}
-                <a class="btn- btn-outline-dark" href="{% url 'home' %}">Home</a>
-            {% endif %}
-
+            </div>
+            {% endfor %}
+            <a class="btn btn-outline-dark">New review</a>
         </div>
     </div>
 </div>
