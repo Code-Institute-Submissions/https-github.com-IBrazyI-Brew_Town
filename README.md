@@ -64,10 +64,16 @@ with very little imput needed from the user to get what they want.
 ### Skeleton
 #### Wireframes
 
-![Wireframes]
+![Wireframes](/static/wireframes/pc1.png) 
+![Wireframes](/static/wireframes/pc2.png) 
+![Wireframes](/static/wireframes/pc3.png) 
+![Wireframes](/static/wireframes/pc4.png)
 
 #### Information Design
-
+- Info boxes within the home page are large, well spaced with clear text.
+- The footer is split into 3 clear sections.
+- Product cards are informative, simple and contain all info the user will require.
+- Product details are enhanced and more clear when a singular product is visable.
 
 #### Interface Design
 
