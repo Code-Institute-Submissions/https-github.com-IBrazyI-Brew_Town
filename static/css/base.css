@@ -3,6 +3,7 @@ html {
     box-sizing: border-box;
 }
 body {
+    height: 100vh;
     font-family: 'Bitter', serif;
 }
 
@@ -160,7 +161,7 @@ footer {
 
 /*HOME*/
 .calls-to-action {
-    background-image: url(/media/brewtown-background.jpg);
+    background-image: url(https://brew-town.s3.eu-west-2.amazonaws.com/media/brewtown-background.jpg);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
