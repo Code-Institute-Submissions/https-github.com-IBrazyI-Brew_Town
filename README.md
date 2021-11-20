@@ -44,7 +44,9 @@ with very little imput needed from the user to get what they want.
 - The site allows users to purchase items, log into thier own account and leave comments.
 
 ### Scope
-
+- Provide an easy to navigate, easy to use E-Commmerce site.
+- Allow users to search for specific products within the database. Also search specific types of products.
+- Provide users a space to add thier feedback to the website/products.
 
 ### Structure
 #### Interaction Design

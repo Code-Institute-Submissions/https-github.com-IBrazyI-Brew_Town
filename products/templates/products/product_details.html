@@ -48,8 +48,8 @@
                             Back to store
                         </a>
                         <input type="submit" class="btn btn-secondary product-add" value="Add to Bag">
-                        <a class="btn btn-outline-dark" href="{% url 'edit_product' %}"> Edit </a>
-                        <a class="btn btn-outline-dark" href="{% url 'delete_product' %}">Delete</a>
+                        <a class="btn btn-outline-dark" href="{% url 'edit_product' product.id %}"> Edit </a>
+                        <a class="btn btn-outline-dark" href="{% url 'delete_product' product.id %}">Delete</a>
                     </div>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </div>
