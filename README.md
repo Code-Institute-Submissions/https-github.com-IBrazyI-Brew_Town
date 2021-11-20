@@ -77,7 +77,7 @@ with very little input needed from the user to get what they want.
 - Information boxes within the home page are large, well spaced with clear text.
 - The footer is split into 3 clear sections.
 - Product cards are informative, simple and contain all information the user will require.
-- Product details are enhanced and more clear when a singular product is visible.
+- Product details are enhanced and clearer when a singular product is visible.
 
 #### Interface Design
 - All buttons and nav elements share the same design for consistancy and balance.
@@ -96,19 +96,19 @@ Two different fonts have been selected for use on this site. Both fonts have bee
 
 ## Features
 #### Existing Features
-- The Brewtown E-Commerce site is made using the python framework Django. A large and feature rich framework.
-- The site features django auth features such as login and account creation. When a user creates an accout they recive and automatic email to verify their email address.
-- The main page of the site is the 'products' page. Here the user can see all products within the PostgreSQL databse.
-- The site maintainer can add more products to the site either using the admin page (prodived by django) or by using the product management page.
+- The Brewtown e-commerce site is made using the python framework Django: a large and feature-rich framework.
+- The site features django auth features such as login and account creation. When a user creates an account, they receive an automatic email to verify their email address.
+- The main page of the site is the 'products' page. Here, the user can see all products within the PostgreSQL databse.
+- The site maintainer can add more products to the site either using the admin page (provided by django) or by using the product management page.
 - The site maintainer can also edit and delete products by selecting the options from within the product page. 
 - Payments for the products are all handled using stripe, which has its own section of the checkout page
-- Users have to option to select pre selected searchers with navigation elements. They can also use the search bar to select them within the title or the product description.
+- Users have the option to select pre selected searchers with navigation elements. They can also use the search bar to select them within the title or the product description.
 - Users with an account have the ability to see their previous orders and update their shipping information.
-- Users and site maintainers can interact using the reviews system. The maintainers can post messages where the users can comment and share thier thoughts.
+- Users and site maintainers can interact using the reviews system. The maintainers can post messages where the users can comment and share their thoughts.
 - Boostrap toasts are used to display messages.
 
 #### Features Left to Implement
-- Implemntation of a subscription service also using stripe.
+- Implementation of a subscription service also using stripe.
 - Saved products within the user profile.
 - Other payment options.
 
@@ -117,13 +117,13 @@ Two different fonts have been selected for use on this site. Both fonts have bee
 ## Technologies Used
 
 ### Languages
-- Python/Django- Used to create all functionality of the site, all pages are rendered using django.
-- PostgreSQL- Used for the site database.
-- HTML- Used for the bulk of the site. Using django's templating langauge to render database items.
+- Python/Django - Used to create all functionality of the site, all pages are rendered using django.
+- PostgreSQL - Used for the site database.
+- HTML- Used for the bulk of the site, using django's templating langusge to render database items.
 - CSS- Mostly used in conjunction with the Boostrap CSS library to style and structure all the pages.
 
 ### Programs
-- Git Pod: Used as a code editor. Was used as it's workspaces are in their own virtual enviroments.
+- Git Pod: Used as a code editor. This was used as it's workspaces are in their own virtual environments.
     Also has the same structure as VS Code.
 - Balsamic: Used to create wireframes.
 - Heroku: Used to deploy the site for public use.
@@ -142,40 +142,40 @@ Two different fonts have been selected for use on this site. Both fonts have bee
 - Using test.py to test functions made within python ensuring correct outputs.
 
 ### Home
-- All nav links working as intended
+- All nav links working as intended.
 - Nav links look good on all screen sizes.
-- Search bar works displaying all queryed items.
+- Search bar works, displaying all queried items.
 
 ### Products
-- Products all displaying with correct images
-- Selecting category searches for other items within the category
-- Quanity buttons work as intended, when items added to bag the price is respecitve of the quantity.
+- Products all displaying with correct images. 
+- Selecting category searches for other items within the category. 
+- Quantity buttons work as intended, when items added to bag the price is respecitve of the quantity.
 - Add to bag link works, displaying in the top right hand corner and with toasts.
 
 ### Shopping Bag
 - Upon empty shopping bag, offers to return user to products page.
 - Information displays well and respecitve to what the user has added to the bag.
-- Delete button works as intedned removing item from bag
-- All the totals are working correctley and displaying the correct ammounts.
-- Checkout button starts the checkout process
+- Delete button works as intended, removing item from bag.
+- All the totals are working correctly and displaying the correct amounts.
+- Checkout button starts the checkout process.
 
 ### Checkout
 - All products loaded into bag show up as intended.
-- User cannot avoid filling in required datafields.
-- Users data is saved for use on next purchase
-- Adjuct bag correctley takes the user back to the bag.
+- User cannot avoid completing the required datafields.
+- Users data is saved for use on next purchase.
+- Adjuct bag correctly takes the user back to the bag.
 - Stripe section working and linked. 
 - Upon completion user is redirected to their order summary.
 
 ### Profile
-- If the user has not already completed an order no orders show as intended.
-- User can always update their shipping details these are then updated in the database.
+- If the user has not already completed an order, no orders show as intended.
+- User can always update their shipping details and these are then updated in the database.
 
 ### Reviews
-- Reviews are displayed in the correct format
+- Reviews are displayed in the correct format.
 - Reviews display the title and some of the content but must be clicked to fully access.
 - Comments are shown beneath their respecive review.
-- User comment form looks good and submits correctley.
+- User comment form looks good and submits correctly.
 
 ## Bugs
 ### General
@@ -235,7 +235,7 @@ Two different fonts have been selected for use on this site. Both fonts have bee
 4. Selected Connect to git hub.
 5. Entered the name of the repo from GitHub I wanted to use.
 6. Once linked to git hub selected 'settings'.
-7. Selected 'reveal config vars'
+7. Selected 'reveal config vars'.
 8. On the config vars menu added all my environment variables including secret key.
 9. Selected 'deploy' from menu and enabled automatic deploys.
 10. Site automatically deploys when new code is pushed up to GitHub.
@@ -247,14 +247,14 @@ Two different fonts have been selected for use on this site. Both fonts have bee
 ### Technical
 - Google Fonts: Used for both fonts within the site.
 - Font awesome: Used for all icons within the site.
-- Django documention: In depth explinations about django processes
+- Django documention: In-depth explanations about django processes. 
 ### Images
 - ![Unsplash](https://unsplash.com/)
     Used for home page background image.
 - ![Ringtons](https://www.ringtons.co.uk/)
-    Used for all tea and coffee images
+    Used for all tea and coffee images.
  ### Acknowledgements
 - Code Institute - Running the course and providing this opportunity. 
 - Code Institute Botique Ado: Used heavily for guidance on both django and stripe functionality.
-- Mentor, Spencer - Reviewing my work and helping with technical problems
+- Mentor, Spencer - Reviewing my work and helping with technical problems.
 - Slack Community - Peer reviewing my work. 
