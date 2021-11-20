@@ -6,16 +6,13 @@
 
 {% block content %}
     <div class="container text-center mt-5">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <h2 class="logo-font mb-4">Product Management</h2>
-            </div>
-        </div>
         <div class="row mb-5">
             <div class="col">
+                <h2 class="mb-4">Product Management</h2>
                 <p>Welcome to the product management window. Here you can add new products to the store.</p>
                 <p>To edit and delete products please navigate to the products page, there you will see the options to edit and delete.</p>
-                <a class="btn btn-secondary" href="{% url 'add_product' %}">Add a product</a>
+                <a class="btn btn-outline-dark" href="{% url 'add_product' %}">Add a product</a>
             </div>
         </div>
+    </div>
 {% endblock %}
