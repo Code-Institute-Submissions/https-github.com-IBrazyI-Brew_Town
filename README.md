@@ -1,6 +1,6 @@
 # Brewtown (Milestone Project 4)
 
-![Brewtown](/static/images/responsive.jpg)
+![Brewtown](/static/wireframes/readme_banner.png)
 
 [Visit My Site Here](https://brew-town.herokuapp.com/)
 
@@ -80,26 +80,37 @@ with very little input needed from the user to get what they want.
 - Product details are enhanced and more clear when a singular product is visible.
 
 #### Interface Design
-
+- All buttons and nav elements share the same design for consistancy and balance.
+- The site UI is basic and un-cluttered leading to easy content reading.
 
 #### Navigation Design
-
+- Navigation links are based at the top of the page, this remains the same for all pages of the site.
+- Any links that are within the site are well labeled. 
 
 ### Surface
 #### Typography
-
-
-
-#### Colour Scheme
-
-
+Two different fonts have been selected for use on this site. Both fonts have been obtained from [Google Fonts](https://fonts.google.com/).
+- Dosis: This has been used for all headings, a quirky font that stands out and really fits the aesthetic of the site. Designed to be modern. 
+- Bitter: Used for the rest of the content on the page, clean and easy to read.
 
 
 ## Features
-
+#### Existing Features
+- The Brewtown E-Commerce site is made using the python framework Django. A large and feature rich framework.
+- The site features django auth features such as login and account creation. When a user creates an accout they recive and automatic email to verify their email address.
+- The main page of the site is the 'products' page. Here the user can see all products within the PostgreSQL databse.
+- The site maintainer can add more products to the site either using the admin page (prodived by django) or by using the product management page.
+- The site maintainer can also edit and delete products by selecting the options from within the product page. 
+- Payments for the products are all handled using stripe, which has its own section of the checkout page
+- Users have to option to select pre selected searchers with navigation elements. They can also use the search bar to select them within the title or the product description.
+- Users with an account have the ability to see their previous orders and update their shipping information.
+- Users and site maintainers can interact using the reviews system. The maintainers can post messages where the users can comment and share thier thoughts.
+- Boostrap toasts are used to display messages.
 
 #### Features Left to Implement
-
+- Implemntation of a subscription service also using stripe.
+- Saved products within the user profile.
+- Other payment options.
 
 <a name="technologies"></a>
 
@@ -107,16 +118,16 @@ with very little input needed from the user to get what they want.
 
 ### Languages
 - Python/Django- Used to create all functionality of the site, all pages are rendered using django.
-    - Flask has also been used to connect the site to the Mongo.DB database, where all information is stored and accessed from.
-- HTML- Used for all template pages for the site and then rendered using Flask. Also used for the basic form structure and validation.
+- PostgreSQL- Used for the site database.
+- HTML- Used for the bulk of the site. Using django's templating langauge to render database items.
 - CSS- Mostly used in conjunction with the Boostrap CSS library to style and structure all the pages.
+
 ### Programs
-- Git Pod: Used as it creates it's own virtual environment.
+- Git Pod: Used as a code editor. Was used as it's workspaces are in their own virtual enviroments.
+    Also has the same structure as VS Code.
 - Balsamic: Used to create wireframes.
 - Heroku: Used to deploy the site for public use.
 - Git Hub: Used to host the websites repository.
-- Git Hub Desktop: Used to access the repository linking it to online Git Hub profile.
-- IAmResponsive: Used to test responsiveness of site.
 - [HTML Validator](https://validator.w3.org/) - Used to check HTML code for errors.
 - [CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to check CSS code for errors.
 - [Python Validator](https://extendsclass.com/python-tester.html) - Used to check Python code for errors.
@@ -128,17 +139,69 @@ with very little input needed from the user to get what they want.
 - Python ![Python Validation](/static/images/pythonchecker.jpg)
 - HTML ![HTML Validation](/static/images/htmlchecker.jpg)
 - CSS ![CSS Validation](/static/images/cssvalidator.jpg)
+- Using test.py to test functions made within python ensuring correct outputs.
 
+### Home
+- All nav links working as intended
+- Nav links look good on all screen sizes.
+- Search bar works displaying all queryed items.
 
+### Products
+- Products all displaying with correct images
+- Selecting category searches for other items within the category
+- Quanity buttons work as intended, when items added to bag the price is respecitve of the quantity.
+- Add to bag link works, displaying in the top right hand corner and with toasts.
 
-### Bugs
+### Shopping Bag
+- Upon empty shopping bag, offers to return user to products page.
+- Information displays well and respecitve to what the user has added to the bag.
+- Delete button works as intedned removing item from bag
+- All the totals are working correctley and displaying the correct ammounts.
+- Checkout button starts the checkout process
 
+### Checkout
+- All products loaded into bag show up as intended.
+- User cannot avoid filling in required datafields.
+- Users data is saved for use on next purchase
+- Adjuct bag correctley takes the user back to the bag.
+- Stripe section working and linked. 
+- Upon completion user is redirected to their order summary.
+
+### Profile
+- If the user has not already completed an order no orders show as intended.
+- User can always update their shipping details these are then updated in the database.
+
+### Reviews
+- Reviews are displayed in the correct format
+- Reviews display the title and some of the content but must be clicked to fully access.
+- Comments are shown beneath their respecive review.
+- User comment form looks good and submits correctley.
+
+## Bugs
+### General
+- Issues linking product images from databse to main site.
+- Navigations links search criteria not working as intended.
+- Naming and syntax errors when writing views and urls.
+- Linking stripe payments to the checkout page.
+- Subtotals not displaying as intended.
+- Quanity of items within bag not displaying and in integer.
 
 ### Devices
+- Galaxy S9: Works as intended.
+- Galaxy S20: Works as intended.
+- I phone 6: Works as intended.
+- I phone 11: Works as intended.
+- I Pad:  Works as intended.
+- Small screen laptop: Works as intended.
+- Large screen laptop: Works as intended.
+- Desktop:  Works as intended.
 
 
 ### Browsers 
-.
+- Firefox: Working as intended, no errors.
+- Microsoft Edge: Working as intended, no errors.
+- Chrome: Working as intended, no errors.
+- Safari: Working as intended, no errors.
 
 <a name="Deployment"></a>
 
@@ -181,14 +244,17 @@ with very little input needed from the user to get what they want.
 <a name="credits"></a>
 
 ## Credits
-
 ### Technical
-
-### Content 
-
- ### Images
-
-
+- Google Fonts: Used for both fonts within the site.
+- Font awesome: Used for all icons within the site.
+- Django documention: In depth explinations about django processes
+### Images
+- ![Unsplash](https://unsplash.com/)
+    Used for home page background image.
+- ![Ringtons](https://www.ringtons.co.uk/)
+    Used for all tea and coffee images
  ### Acknowledgements
 - Code Institute - Running the course and providing this opportunity. 
+- Code Institute Botique Ado: Used heavily for guidance on both django and stripe functionality.
+- Mentor, Spencer - Reviewing my work and helping with technical problems
 - Slack Community - Peer reviewing my work. 
