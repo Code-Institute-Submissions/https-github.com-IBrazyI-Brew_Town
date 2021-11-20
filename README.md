@@ -50,8 +50,16 @@ with very little imput needed from the user to get what they want.
 
 ### Structure
 #### Interaction Design
+- Create a website that is responsive, works at all screen sizes and has mobile, tablet and PC compatibility.
+- Allow for easy navigation between pages of the website.
+- Create easy to use and understand forms for users to fill in.
+- Create a UI that is easy on the eye.
+
 
 #### Information Architecture
+- Create a products page that have clear distinctions between products.
+- Content is spaced well and easy to read.
+- Forms are created in a such a way that they are logical and not confusing even to first time users.
 
 ### Skeleton
 #### Wireframes
