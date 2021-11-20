@@ -68,6 +68,10 @@ with very little input needed from the user to get what they want.
 ![Wireframes](/static/wireframes/pc2.png) 
 ![Wireframes](/static/wireframes/pc3.png) 
 ![Wireframes](/static/wireframes/pc4.png)
+![Wireframes](/static/wireframes/mobile1.png)
+![Wireframes](/static/wireframes/mobile2.png)
+![Wireframes](/static/wireframes/mobile3.png)
+![Wireframes](/static/wireframesmobile4.png)
 
 #### Information Design
 - Information boxes within the home page are large, well spaced with clear text.
