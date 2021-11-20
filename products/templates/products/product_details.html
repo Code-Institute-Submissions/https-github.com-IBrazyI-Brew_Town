@@ -5,7 +5,7 @@
 <div class="container product-details-container">
     <div class="row">
         <div class="col-6">
-            <img src="{{ product.image.url}}" alt="{{ product.name }}">
+            <img src="{{ product.image_url}}" alt="{{ product.name }}">
         </div>
         <div class="col-6">
             <h2>{{ product.name }}</h2>
@@ -47,9 +47,11 @@
                         <a href="{% url 'products' %}" class="btn btn-outline-dark ">
                             Back to store
                         </a>
-                        <input type="submit" class="btn btn-secondary product-add" value="Add to Bag">
-                        <a class="btn btn-outline-dark" href="{% url 'edit_product' product.id %}"> Edit </a>
-                        <a class="btn btn-outline-dark" href="{% url 'delete_product' product.id %}">Delete</a>
+                        <input type="submit" class="btn btn-outline-dark product-add" value="Add to Bag">
+                        {% if request.user.is_superuser %}
+                        <a class="btn btn-warning" href="{% url 'edit_product' product.id %}"> Edit </a>
+                        <a class="btn btn-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                        {% endif %}
                     </div>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </div>
