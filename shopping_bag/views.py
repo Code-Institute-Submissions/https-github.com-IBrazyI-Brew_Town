@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, get_object
 from django.contrib import messages
 from products.models import Product
 
+
 def view_bag(request):
     """Renders the shopping bag page, will also handle all shopping bag processes"""
     
@@ -43,6 +44,7 @@ def edit_bag(request, item_id):
     
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
+
 
 def remove_from_bag(request, item_id):
     """ Remove an item from the shopping bag """

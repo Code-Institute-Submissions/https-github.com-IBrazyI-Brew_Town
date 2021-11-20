@@ -3,6 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+
 def shopping_bag_contents(request):
 
     bag_items = []
@@ -10,9 +11,7 @@ def shopping_bag_contents(request):
     product_count = 0
     bag = request.session.get('bag', {})
     
-
     for item_id, quantity in bag.items():
-        #confused to why this makes it work...
         quantity = int(quantity)
         product = get_object_or_404(Product, pk=item_id)
         total += quantity * product.price

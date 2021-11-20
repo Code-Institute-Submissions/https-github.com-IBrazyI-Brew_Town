@@ -2,12 +2,12 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Review
 from .forms import CommentForm
 
+
 def reviews(request):
     reviews = Review.objects.filter(status=1).order_by('-created_on')
 
     template = 'reviews/reviews.html'
     return render(request, template, {'reviews':reviews})
-
 
 
 def reviews_details(request, slug):

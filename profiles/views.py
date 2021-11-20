@@ -22,8 +22,8 @@ def profile(request):
             messages.error(request, 'Update failed, please check the information is correct.')
     else:
         form = UserProfileForm(instance=profile)
+        
     orders = profile.orders.all()
-
     template = 'profiles/profile.html'
     context = {
         'form': form,

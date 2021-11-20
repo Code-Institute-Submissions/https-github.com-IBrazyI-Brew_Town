@@ -5,8 +5,11 @@ from .models import Product, Category
 from .forms import ProductForm
 from django.contrib.auth.decorators import login_required
 
+
 def view_all_products(request):
-    """ Renders the products page, displays the products model and handles all sorting and searching queries """
+    """ Renders the products page, displays the products model and
+    handles all sorting and searching queries 
+    """
 
     products = Product.objects.all()
     query = ""
@@ -34,6 +37,7 @@ def view_all_products(request):
         }
 
     return render(request, 'products/products.html', products_all)
+
 
 def product_details(request, product_id):
     """ Renders the product detail page """
