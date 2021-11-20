@@ -1,5 +1,4 @@
 /*ELEMENT STYLING*/
-
 html {
     box-sizing: border-box;
 }
@@ -24,15 +23,16 @@ a:hover {
 .push-down {
     margin-bottom: 20vh;
 }
-/* HEADER STYLES */
 
+
+/* HEADER STYLES */
 .top-nav {
     background-color: black;
     margin-bottom: 0px;
 }
 
-/*Title*/
 
+/*Title*/
 .site-title {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -42,8 +42,8 @@ a:hover {
     color: white;
 }
 
-/* Navigation Links */
 
+/* Navigation Links */
 .site-links-area {
     margin-top: auto;
     margin-bottom: auto;
@@ -58,7 +58,6 @@ a:hover {
 
 
 /*Search Bar*/
-
 .search-bar-form {
     font-size: 20px;
     margin-bottom: 0px;
@@ -68,8 +67,8 @@ a:hover {
     width: 100%;
 }
 
-/*Profile and Bag Icons*/
 
+/*Profile and Bag Icons*/
 .profile-bag {
     margin-top: auto;
     margin-bottom: auto;
@@ -132,7 +131,6 @@ a:hover {
 
 
 /*FOOTER*/
-
 footer {
     background-color: #000000;
     color: white;
@@ -146,21 +144,21 @@ footer {
     margin-bottom: 30px;
 }
 
-/*Social Media icons*/
 
+/*Social Media icons*/
 .social-icon {
     font-size: 40px;
     margin: 30px;
 }
 
-/*Newsletter*/
 
+/*Newsletter*/
 .newsletter-signup {
     font-size: 20px;
 }
 
-/*HOME*/
 
+/*HOME*/
 .calls-to-action {
     background-image: url(/media/brewtown-background.jpg);
     background-size: cover;
@@ -178,7 +176,6 @@ footer {
 
 
 /* TOASTS */
-
 .toast-container {
     position: fixed;
     top: 100px;
@@ -190,8 +187,8 @@ footer {
     color: black;
 }
 
-/* PRODUCTS */
 
+/* PRODUCTS */
 .products-page {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -202,15 +199,15 @@ footer {
     border: 3px solid black;
 }
 
-/* PRODUCT DETAILS */
 
+/* PRODUCT DETAILS */
 .product-details-container {
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
-/* SHOPPING BAG */
 
+/* SHOPPING BAG */
 .shopping-bag-container {
     margin-top: 50px;
     margin-bottom: 50px;
