@@ -9,6 +9,7 @@ def reviews(request):
     return render(request, template, {'reviews':reviews})
 
 
+
 def reviews_details(request, slug):
     template_name = 'reviews/reviews_details.html'
     review = get_object_or_404(Review, slug=slug)
