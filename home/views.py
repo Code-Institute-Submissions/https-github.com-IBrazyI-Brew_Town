@@ -4,14 +4,6 @@ from django.conf import settings
 
 
 def index(request):
+
     return render(request, 'home/index.html')
 
-
-def newsletter_email(request, email):
-    if method == GET:
-        email = request.GET.get('email')
-
-        send_mail('Newsletter',
-                    'Welcome {{ user_email }} to the brewtown newsletter!',
-                     settings.DEFAULT_FROM_EMAIL,
-                      user_email)
