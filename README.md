@@ -208,15 +208,14 @@ Two different fonts have been selected for use on this site. Both fonts have bee
 ## Deployment
 
 ### Deployment to GitHub
-1. Created new file inside documents folder named "Coding Course" and within that created a file called "The-Drunken-Goblin(Milestone Project 3)".
-2. Opened GitHub Desktop and selected "New Repository".
-3. Gave the project name "The-Drunken-Goblin" and clicked "Create Repository".
-4. Opened the repository in VS Code.
-5. Created index.html and README.md pages.
-6. Opened up local terminal and "Git Added" both pages.
-7. Committed both pages using "Git Commit".
-8. Pushed changed with "Git Push" adding my work to my Git Hub page.
-9. Opened my GitHub page to see the changes.
+1. Opened GitHub Desktop and selected "New Repository".
+2. Gave the project name "Brew-town" and clicked "Create Repository".
+3. Opened the repository in GitPod.
+4. Created index.html and README.md pages.
+5. Opened up local terminal and "Git Added" both pages.
+6. Committed both pages using "Git Commit".
+7. Pushed changed with "Git Push" adding my work to my Git Hub page.
+8. Opened my GitHub page to see the changes.
 
 ### How to fork the project
 1. Select repository you wish to fork.
