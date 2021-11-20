@@ -2,7 +2,7 @@
 
 ![Brewtown](/static/images/responsive.jpg)
 
-[Visit My Site Here](https://the-drunken-goblin.herokuapp.com/)
+[Visit My Site Here](https://brew-town.herokuapp.com/)
 
 ## Overview
 Brewtown is an e-commerce site dedicated to the selling of tea and coffee. With a simple layout and easy navigation, it is designed to let the products do the talking,
