@@ -3,8 +3,7 @@ from .models import Review, Comment
 
 
 class ReviewAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'status','created_on')
-    list_filter = ("status",)
+    list_display = ('title', 'slug', 'created_on')
     search_fields = ['title', 'content']
     prepopulated_fields = {'slug': ('title',)}
   
@@ -13,11 +12,7 @@ admin.site.register(Review, ReviewAdmin)
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'body', 'review', 'created_on', 'active')
-    list_filter = ('active', 'created_on')
-    search_fields = ('name', 'email', 'body')
-    actions = ['approve_comments']
+    list_display = ('body', 'review', 'created_on')
+    list_filter = ('created_on',)
+    search_fields = ('body',)
 
-
-    def approve_comments(self, request, queryset):
-        queryset.update(active=True)

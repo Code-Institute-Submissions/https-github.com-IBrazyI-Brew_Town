@@ -2,11 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-STATUS = (
-    (0,"Draft"),
-    (1,"Publish")
-)
-
 class Review(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=80, unique=True)
@@ -14,7 +9,6 @@ class Review(models.Model):
     updated_on = models.DateTimeField(auto_now= True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
 
 
     class Meta:
@@ -26,12 +20,9 @@ class Review(models.Model):
 
 
 class Comment(models.Model):
-    review = models.ForeignKey(Review,on_delete=models.CASCADE,related_name='comments')
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
-    body = models.TextField()
+    review = models.ForeignKey(Review, on_delete=models.CASCADE)
+    body = models.TextField(max_length=200, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
-    active = models.BooleanField(default=False)
 
 
     class Meta:

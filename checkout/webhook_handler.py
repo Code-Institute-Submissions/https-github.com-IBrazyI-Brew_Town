@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
+
 from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.models import UserProfile
@@ -29,7 +30,7 @@ class StripeWH_Handler:
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
-            [cust_email],
+            [cust_email]
         )        
 
     def handle_event(self, event):
