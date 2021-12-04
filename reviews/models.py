@@ -20,7 +20,7 @@ class Review(models.Model):
 
 
 class Comment(models.Model):
-    review = models.ForeignKey(Review, on_delete=models.CASCADE)
+    review = models.ForeignKey(Review, on_delete=models.CASCADE, related_name='comments')
     body = models.TextField(max_length=200, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
 

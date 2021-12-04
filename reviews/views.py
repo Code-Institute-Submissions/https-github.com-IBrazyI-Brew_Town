@@ -14,9 +14,33 @@ def reviews(request):
 
 
 @login_required
+def add_review(request):
+    """Add a review"""
+    if not request.user.is_superuser:
+        return redirect(reverse('reviews'))
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'Review Created!')
+            return redirect(reverse('reviews'))
+        else:
+            messages.error(request, 'Review was not added.')
+    else:
+        form = ReviewForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
 def delete_review(request, slug):
     """ Delete a review, only if superuser or the review creator """
-    if not request.user.is_superuser:
+    if not request.user.is_superuser or request.user == Review.author:
         return redirect('reviews.html')
     review = get_object_or_404(Review, slug=slug)
     review.delete()
@@ -27,7 +51,7 @@ def delete_review(request, slug):
 def reviews_details(request, slug):
     template_name = 'reviews/reviews_details.html'
     review = get_object_or_404(Review, slug=slug)
-    comments = Comment.objects.order_by(('-created_on'))
+    comments = review.comments.all()
     new_comment = None
     # Comment posted
     if request.method == 'POST':

@@ -19,6 +19,18 @@
                 </div>
             </div>
             {% endfor %}
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <form method="POST" action="{% url 'add_review' %}" class="form" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        
+                        <div class="text-right">
+                            <a class="btn btn-outline-dark" href="{% url 'reviews' %}">Cancel</a>
+                            <button class="btn btn-outline-dark" type="submit">Add Review</button>
+                        </div>
+                    </form>
+                </div>            
+            </div>
         </div>
     </div>
 </div>
