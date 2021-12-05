@@ -24,7 +24,9 @@ def add_review(request):
     if  request.method == 'POST':
         form = ReviewForm(request.POST, request.FILES)
         if form.is_valid():
-            review = form.save()
+            review = form.save(commit=False)
+            review.review_author = request.user
+            review.save()
             messages.success(request, 'Review Added!')
             return redirect(reverse('reviews'))
         else: 
@@ -37,3 +39,10 @@ def add_review(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_review(request, review_id):
+    """ Delete a review, either a superuser or the creator of the review """
+    review_author = review.review_author
+    print(review_author)
