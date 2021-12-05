@@ -44,5 +44,14 @@ def add_review(request):
 @login_required
 def delete_review(request, review_id):
     """ Delete a review, either a superuser or the creator of the review """
-    review_author = review.review_author
-    print(review_author)
+    review = get_object_or_404(Review, pk=review_id)
+    current_user = request.user
+    review_user = review.review_author
+    if current_user == review_user or request.user.is_superuser:
+        review.delete()
+        messages.success(request, 'Review deleted!')
+    else:
+        messages.error(request, 'You cannot delete this review.')
+        return redirect(reverse('reviews'))
+
+    return redirect(reverse('reviews'))
