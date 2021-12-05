@@ -55,3 +55,34 @@ def delete_review(request, review_id):
         return redirect(reverse('reviews'))
 
     return redirect(reverse('reviews'))
+
+@login_required
+def edit_review(request, review_id):
+    """ Edit a review,  either a superuser or the creator of the review """
+    review = get_object_or_404(Review, pk=review_id)
+    current_user = request.user
+    review_user = review.review_author
+    if current_user == review_user or request.user.is_superuser:
+        if request.method == 'POST':
+            form = ReviewForm(request.POST, request.FILES, instance=review) 
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Review updated')
+                return redirect(reverse('reviews'))
+            else:
+                messages.error(request, 'Failed to update the review. Please try again')
+        else:
+            form = ReviewForm(instance=review)
+            messages.info(request, f'You are editing {review.review_title}')  
+
+        template = 'reviews/edit_review.html'
+        context = {
+        'form': form,
+        'review': review,
+        }
+    else:
+        messages.error(request, 'You cannot edit this review.')
+        return redirect(reverse('reviews'))
+
+
+    return render(request, template, context)

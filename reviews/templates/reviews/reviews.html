@@ -15,6 +15,7 @@
                     <a href="" class="btn btn-outline-dark">Read More &rarr;</a>
                     {% if request.user == review.review_author or user.is_superuser %}
                     <a href="{% url 'delete_review' review.id %}" class="right btn btn-outline-danger">Delete</a>
+                    <a href="{% url 'edit_review' review.id %}" class="btn btn-outline-success">Edit</a>
                     {% endif %}
                 </div>
             </div>
