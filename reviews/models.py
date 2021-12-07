@@ -11,3 +11,13 @@ class Review(models.Model):
 
     def __str__(self):
         return self.review_title
+
+class Comment(models.Model):
+    comment_review = models.ForeignKey(Review, on_delete=models.CASCADE, null=True)
+    comment_author = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    comment_text = models.TextField(max_length=200, null=True)
+
+    def __str__(self):
+        return self.comment_author
