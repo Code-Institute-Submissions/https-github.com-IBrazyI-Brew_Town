@@ -20,4 +20,4 @@ class Comment(models.Model):
     comment_text = models.TextField(max_length=200, null=True)
 
     def __str__(self):
-        return self.comment_author
+        return f'"{self.comment_author.username}" commented on "{self.comment_review.review_title}"'

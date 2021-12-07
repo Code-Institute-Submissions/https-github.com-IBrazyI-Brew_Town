@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .models import Review
+from .models import Review, Comment
 from .forms import ReviewForm
 
 
@@ -89,11 +89,14 @@ def edit_review(request, review_id):
 
 def review_details(request, review_id):
     """ Renders the selected review and its comments """
-
     review = get_object_or_404(Review, pk=review_id)
+    review_name = review.review_title
+    review_comments = Comment.objects.all().filter(comment_review=review_id)
+    
     template = 'reviews/reviews_details.html'
     context = {
         'review': review,
+        'review_comments': review_comments
     }
 
     return render(request, template, context)

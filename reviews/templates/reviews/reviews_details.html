@@ -14,19 +14,18 @@
     <div class="col-12 card mb-4 mt-3">
       <div class="card-body">
         <!-- comments -->
-        <h2>{{ comments.count }} comments</h2>
-
-        {% for comment in comments %}
+        <h2>{{ review_comments.count }} comments</h2>
         <div class="comments" style="padding: 10px;">
+          {% for comments in review_comments %}
           <p class="font-weight-bold">
-            {{ comment.name }}
+            {{ comments.comment_author }}
             <span class=" text-muted font-weight-normal">
-              {{ comment.created_on }}
+              {{ comments.created_at }}
             </span>
           </p>
-          {{ comment.body | linebreaks }}
+          {{ comments.comment_text | linebreaks }}
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
     </div>
   </div>
