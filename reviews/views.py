@@ -86,3 +86,14 @@ def edit_review(request, review_id):
 
 
     return render(request, template, context)
+
+def review_details(request, review_id):
+    """ Renders the selected review and its comments """
+
+    review = get_object_or_404(Review, pk=review_id)
+    template = 'reviews/reviews_details.html'
+    context = {
+        'review': review,
+    }
+
+    return render(request, template, context)
