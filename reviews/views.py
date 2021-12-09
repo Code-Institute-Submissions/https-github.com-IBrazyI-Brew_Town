@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Review, Comment
-from .forms import ReviewForm
+from .forms import ReviewForm, CommentForm
 
 
 
@@ -96,7 +96,38 @@ def review_details(request, review_id):
     template = 'reviews/reviews_details.html'
     context = {
         'review': review,
-        'review_comments': review_comments
+        'review_title': review_name,
+        'review_comments': review_comments,
+        'review_id': review_id
+    }
+
+    return render(request, template, context)
+
+@login_required
+def add_comment(request, review_id):
+    """ Add a comment to selected review """
+    review_id = review_id
+    review = get_object_or_404(Review, pk=review_id)
+    if not request.user:
+        return redirect(reverse('reviews'))
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST, request.FILES)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.comment_review = review
+            comment.comment_author = request.user
+            comment.save()
+            messages.success(request, 'Comment added!')
+            return redirect('reviews')
+        else: 
+            messages.error(request, 'Comment was not added, please try again.')
+    else:
+        form = CommentForm()
+        template = 'reviews/add_comment.html'
+        context = {
+            'form': form,
+            'review_id': review_id,
     }
 
     return render(request, template, context)
