@@ -98,7 +98,7 @@ def review_details(request, review_id):
         'review': review,
         'review_title': review_name,
         'review_comments': review_comments,
-        'review_id': review_id
+        'review_id': review_id,
     }
 
     return render(request, template, context)
@@ -131,3 +131,18 @@ def add_comment(request, review_id):
     }
 
     return render(request, template, context)
+
+@login_required
+def delete_comment(request, comments_id):
+    """ Delete a comment, either a superuser or the creator of the comment """
+    comment = get_object_or_404(Comment, pk=comments_id)
+    current_user = request.user
+    review_user = comment.comment_author
+    if current_user == review_user or request.user.is_superuser:
+        comment.delete()
+        messages.success(request, 'Comment deleted!')
+    else:
+        messages.error(request, 'You cannot delete this comment.')
+        return redirect(reverse('reviews'))
+
+    return redirect(reverse('reviews'))

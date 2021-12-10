@@ -17,13 +17,16 @@
         <h2>{{ review_comments.count }} comments</h2>
         <div class="comments" style="padding: 10px;">
           {% for comments in review_comments %}
-          <p class="font-weight-bold">
-            {{ comments.comment_author }}
+          <p class="mt-4 font-weight-bold">
+            {{ comments.comment_author }} | {{comments.id}}
             <span class=" text-muted font-weight-normal">
               {{ comments.created_at }}
             </span>
           </p>
           {{ comments.comment_text | linebreaks }}
+          {% if request.user == comments.comment_author or user.is_superuser %}
+            <a href="{% url 'delete_comment' comments.id %}" class="text-danger">Delete</a>
+          {% endif %}
           {% endfor %}
         </div>
       </div>
