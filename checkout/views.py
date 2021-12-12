@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, reverse
+from django.shortcuts import get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -16,6 +17,7 @@ from shopping_bag.contexts import shopping_bag_contents
 import stripe
 import json
 
+
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -31,6 +33,7 @@ def cache_checkout_data(request):
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
+
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -77,9 +80,10 @@ def checkout(request):
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
-            
+
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success',
+                                    args=[order.order_number]))
         else:
             print("Form not valid", order_form.errors)
             messages.error(request, 'There was an error with your form. \
@@ -87,7 +91,8 @@ def checkout(request):
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(request, "There's nothing in your n\
+             bag at the moment")
             return redirect(reverse('products'))
 
         current_bag = shopping_bag_contents(request)
@@ -131,6 +136,7 @@ def checkout(request):
 
     return render(request, template, context)
 
+
 def checkout_success(request, order_number):
     """
     Handle successful checkouts
@@ -165,8 +171,6 @@ def checkout_success(request, order_number):
 
     if 'bag' in request.session:
         del request.session['bag']
-    
-
     """Send the user a confirmation email"""
     cust_email = order.email
     subject = render_to_string(
@@ -175,13 +179,13 @@ def checkout_success(request, order_number):
     body = render_to_string(
         'checkout/confirmation_emails/confirmation_email_body.txt',
         {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+
     send_mail(
         subject,
         body,
         settings.DEFAULT_FROM_EMAIL,
         [cust_email]
-    )    
+    )
 
     template = 'checkout/checkout_success.html'
     context = {
