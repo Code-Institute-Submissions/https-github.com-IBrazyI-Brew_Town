@@ -140,8 +140,8 @@ Two different fonts have been selected for use on this site. Both fonts have bee
 
 ## Testing
 - Code Validators- 
-- HTML ![HTML Validation](media/HTML validator.png)
-- CSS ![CSS Validation](media/CSS validator.png)
+- HTML ![HTML Validation](media/html-validator.png)
+- CSS ![CSS Validation](media/css-validator.png)
 - Using test.py to test functions made within python ensuring correct outputs.
 
 ### Home
