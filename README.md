@@ -113,6 +113,9 @@ Two different fonts have been selected for use on this site. Both fonts have bee
 - Other payment options.
 - Working, user defined star rating for products.
 
+#### Data Schema
+![Data Schema](media/brewtown-dataschema.png)
+
 <a name="technologies"></a>
 
 ## Technologies Used
@@ -137,9 +140,8 @@ Two different fonts have been selected for use on this site. Both fonts have bee
 
 ## Testing
 - Code Validators- 
-- Python ![Python Validation](/static/images/pythonchecker.jpg)
-- HTML ![HTML Validation](/static/images/htmlchecker.jpg)
-- CSS ![CSS Validation](/static/images/cssvalidator.jpg)
+- HTML ![HTML Validation](media/HTML validator.png)
+- CSS ![CSS Validation](media/CSS validator.png)
 - Using test.py to test functions made within python ensuring correct outputs.
 
 ### Home
@@ -247,7 +249,8 @@ Two different fonts have been selected for use on this site. Both fonts have bee
 ### Technical
 - Google Fonts: Used for both fonts within the site.
 - Font awesome: Used for all icons within the site.
-- Django documention: In-depth explanations about django processes. 
+- Django documention: In-depth explanations about django processes.
+- dbdiagram.io: Used to create the data schema. 
 ### Images
 - ![Unsplash](https://unsplash.com/)
     Used for home page background image.
