@@ -218,6 +218,7 @@ the Review or comment to edit or delete that item.
 - Adjuct bag correctly takes the user back to the bag.
 - Stripe section working and linked. 
 - Upon completion user is redirected to their order summary.
+- Email sends upon completion of purchase, even if user does not have an account.
 
 ### Profile
 - If the user has not already completed an order, no orders show as intended.
@@ -227,7 +228,10 @@ the Review or comment to edit or delete that item.
 - Reviews are displayed in the correct format.
 - Reviews display the title and some of the content but must be clicked to fully access.
 - Comments are shown beneath their respecive review.
+- Logged in user can choose to edit reviews they have posted.
+- Logged in users have the options to delete any comments they have made.
 - User comment form looks good and submits correctly.
+- Non logged in users are asked to log in to post a review or comment
 
 ## Bugs
 ### General
@@ -237,6 +241,7 @@ the Review or comment to edit or delete that item.
 - Linking stripe payments to the checkout page.
 - Subtotals not displaying as intended.
 - Quanity of items within bag not displaying and in integer.
+- Error code 500 when loading profile page, fixed my removing extra static CSS file from profile app.
 
 ### Devices
 - Galaxy S9: Works as intended.
