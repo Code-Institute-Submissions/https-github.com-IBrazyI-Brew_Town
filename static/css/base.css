@@ -226,3 +226,9 @@ footer {
 .remove-item {
     cursor: pointer;
 }
+
+/* PROFILE */
+.order-history {
+    max-height: 416px;
+    overflow-y: auto;
+}
