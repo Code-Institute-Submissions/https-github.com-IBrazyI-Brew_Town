@@ -190,27 +190,26 @@ the Review or comment to edit or delete that item.
 - Code Validators- 
 - HTML ![HTML Validation](media/html-validator.png)
 - CSS ![CSS Validation](media/css-validator.png)
-- Using test.py to test functions made within python ensuring correct outputs.
+- Using test.py to test functions made within python, ensuring correct outputs.
 
 ### Home
 - All nav links working as intended.
 - Nav links look good on all screen sizes.
 - Search bar works, displaying all queried items.
-- Social media links work taking user to desired page.
+- Social media links work, taking user to desired page.
 
 ### Products
 - Products all displaying with correct images. 
 - Selecting category searches for other items within the category. 
-- Quantity buttons work as intended, when items added to bag the price is respecitve of the quantity.
-- Add to bag link works, displaying in the top right hand corner and with toasts.
+- Quantity buttons work as intended; when items are added to bag, the price is reflective of the quantity.
+- Add to bag link works, displaying in the top right-hand corner and with toasts.
 
 ### Product Management
 - Only admin users can access the product management page.
 - Admin can create new products without accessing the database.
-- Upon trying to create a new product without complting all input boxes,
-the site does not allow it.
+- Site does not allow for admin trying to create a new product without completing all input boxes. 
 - Editing a product allows users to change all inputs or only one, the product changes upon pressing the update button.
-- Upon deleting the product is removed from the site.
+- Upon deleting, the product is removed from the site.
 
 ### Shopping Bag
 - Upon empty shopping bag, offers to return user to products page.
@@ -220,12 +219,12 @@ the site does not allow it.
 - Checkout button starts the checkout process.
 
 ### Checkout
-- All products loaded into bag show up as intended.
+- All products loaded into the bag show up as intended.
 - User cannot avoid completing the required datafields.
 - Users data is saved for use on next purchase.
-- Adjuct bag correctly takes the user back to the bag.
+- Adjust bag correctly takes the user back to the bag.
 - Stripe section working and linked. 
-- Upon completion user is redirected to their order summary.
+- Upon completion, user is re-directed to their order summary.
 - Email sends upon completion of purchase, even if user does not have an account.
 
 ### Profile
@@ -235,19 +234,19 @@ the site does not allow it.
 ### Reviews
 - Reviews are displayed in the correct format.
 - Reviews display the title and some of the content but must be clicked to fully access.
-- Comments are shown beneath their respecive review.
+- Comments are shown beneath their respective review.
 - Logged in user can choose to edit reviews they have posted.
-- Logged in users have the options to delete any comments they have made.
-- Logged in users can edit their posts, upon clicking the edit button the review is updated.
+- Logged in users have the option to delete any comments they have made.
+- Logged in users can edit their posts - upon clicking the edit button, the review is updated.
 - User comment form looks good and submits correctly.
-- Non logged in users are asked to log in to post a review or comment.
+- Non-logged in users are asked to log in to post a review or comment.
 
 ### Toasts
 - Shows when user is logged in.
-- Shows when user signs up telling them to validate email.
+- Shows when user signs up, telling them to validate email.
 - Shows when user logs out.
 - Shows upon adding of product to bag.
-- Shows when purchase is finished, informs that user will recive and email.
+- Shows when purchase is finished, informs that user will receive an email.
 - Shows for admin when editing a product.
 - Shows for admin when product is deleted.
 - Shows for admin when product is added.
@@ -261,13 +260,13 @@ the site does not allow it.
 ## Bugs
 ### General
 - Issues linking product images from databse to main site. Fixed uploading images to AWS and using hosted image links.
-- Navigations links search criteria not working as intended. Fixed ensuring catergory names were uses and updated within the database.
+- Navigations links search criteria not working as intended. Fixed ensuring catergory names were used and updated within the database.
 - Naming and syntax errors when writing views and urls. Followed naming conventions and syntax, making sure correct urls and views were called.
 - Linking stripe payments to the checkout page. 
 - Subtotals not displaying as intended. Ensured correct formulas were used and correct variables were passed.
-- Quanity of items within bag not displaying and in integer.
-- Error code 500 when loading profile page, fixed my removing extra static CSS file from profile app.
-- Emails not sending upon compltion of order. Added new function to the checkout view, upon successful payment email would be sent, rather than relying on the stripe webhooks.
+- Quantity of items within bag not displaying, and displaying in integer.
+- Error code 500 when loading profile page, fixed by removing extra static CSS file from profile app.
+- Emails not sending upon completion of order. Added new function to the checkout view. Upon successful payment email would be sent rather than relying on the stripe webhooks.
 
 ### Devices
 - Galaxy S9: Works as intended.
