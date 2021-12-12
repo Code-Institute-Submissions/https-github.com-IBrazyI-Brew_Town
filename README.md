@@ -113,8 +113,50 @@ Two different fonts have been selected for use on this site. Both fonts have bee
 - Other payment options.
 - Working, user defined star rating for products.
 
-#### Data Schema
+### Data Schema
 ![Data Schema](media/brewtown-dataschema.png)
+#### Models
+
+##### User
+- The User model comes in-build within the django framework and is used for most of the authentication within the site.
+- The model is passed to the UserProfile model where their user information can be updated and saved for faster checkout upon repeat purchases.
+- User is also passed to the Review and Comment models where it is used to display who has posted the review or comment, also allowing the user who has created
+the Review or comment to edit or delete that item.
+- The User is also used within the order model, where is allocated that specific order keeping each separate order assigned to its respective User.
+
+##### Order
+- The Order model is used to store the information of both the users details, users postal address and also the charges that will be used by stripe to take the payment.
+- The Order will take the Users information which is then stored within the UserProfile model for quicker purchasing next time.
+
+##### OrderLineItem
+- OrderLineItem is used to pass information to the Order model
+- It has the key infromation like what the product is, how many of that product are required and the price.
+- Each of these OrderLineItems are then sent to the Order and used to calculate the totals.
+
+
+##### UserProfile
+- The UserProfile model will originally store the information from the Order model to allow for faster checkout when a user returns to the site.
+- The User Profile can also be updated without and order. Where the user can update their shipping details.
+
+##### Review
+- Reviews are simple posts that can be created by the admin or by a logged in user.
+- Reviews use the User model, where there saved to the User who has created them, this is then displayed within the reviews page of the site
+
+##### Comments
+- Comments are directley related to the Reviews, without a Review their can be no comments.
+- Comments are assigned to a review, where they will display when that Review is view on the site.
+- Comments also take information from the User model, where each comment is created by a User.
+
+##### Category
+- Category modlels only have two fields name and friendly_name.
+- name is used by the products model to assign each product a category which is used for sorting and searching.
+- friendly_name is used to display a more readable name for users of the site.
+
+##### Product
+- The product model is the most seen model within the site. It has the most direct interaction with users and contains all the information needed by site users.
+- Each product has its own SKU which works the same as a personal id, each product is indvidual.
+- Name and description and image are all used on the main products pages, to encoruage the user to purchase the products. 
+- Price will be sent to the order when the user decides to checkout, this will be used to calculate what the customer will be charged.
 
 <a name="technologies"></a>
 
