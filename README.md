@@ -204,6 +204,14 @@ the Review or comment to edit or delete that item.
 - Quantity buttons work as intended, when items added to bag the price is respecitve of the quantity.
 - Add to bag link works, displaying in the top right hand corner and with toasts.
 
+### Product Management
+- Only admin users can access the product management page.
+- Admin can create new products without accessing the database.
+- Upon trying to create a new product without complting all input boxes,
+the site does not allow it.
+- Editing a product allows users to change all inputs or only one, the product changes upon pressing the update button.
+- Upon deleting the product is removed from the site.
+
 ### Shopping Bag
 - Upon empty shopping bag, offers to return user to products page.
 - Information displays well and respecitve to what the user has added to the bag.
@@ -230,8 +238,25 @@ the Review or comment to edit or delete that item.
 - Comments are shown beneath their respecive review.
 - Logged in user can choose to edit reviews they have posted.
 - Logged in users have the options to delete any comments they have made.
+- Logged in users can edit their posts, upon clicking the edit button the review is updated.
 - User comment form looks good and submits correctly.
-- Non logged in users are asked to log in to post a review or comment
+- Non logged in users are asked to log in to post a review or comment.
+
+### Toasts
+- Shows when user is logged in.
+- Shows when user signs up telling them to validate email.
+- Shows when user logs out.
+- Shows upon adding of product to bag.
+- Shows when purchase is finished, informs that user will recive and email.
+- Shows for admin when editing a product.
+- Shows for admin when product is deleted.
+- Shows for admin when product is added.
+- Shows when reivew is added.
+- Shows when comment is added.
+- Shows when review is edited
+- Shows when review is deleted.
+- Shows when comment is deleted.
+
 
 ## Bugs
 ### General
