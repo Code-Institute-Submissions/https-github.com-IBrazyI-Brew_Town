@@ -260,13 +260,14 @@ the site does not allow it.
 
 ## Bugs
 ### General
-- Issues linking product images from databse to main site.
-- Navigations links search criteria not working as intended.
-- Naming and syntax errors when writing views and urls.
-- Linking stripe payments to the checkout page.
-- Subtotals not displaying as intended.
+- Issues linking product images from databse to main site. Fixed uploading images to AWS and using hosted image links.
+- Navigations links search criteria not working as intended. Fixed ensuring catergory names were uses and updated within the database.
+- Naming and syntax errors when writing views and urls. Followed naming conventions and syntax, making sure correct urls and views were called.
+- Linking stripe payments to the checkout page. 
+- Subtotals not displaying as intended. Ensured correct formulas were used and correct variables were passed.
 - Quanity of items within bag not displaying and in integer.
 - Error code 500 when loading profile page, fixed my removing extra static CSS file from profile app.
+- Emails not sending upon compltion of order. Added new function to the checkout view, upon successful payment email would be sent, rather than relying on the stripe webhooks.
 
 ### Devices
 - Galaxy S9: Works as intended.
