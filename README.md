@@ -32,11 +32,17 @@ with very little input needed from the user to get what they want.
 - I want to be able to buy products without logging in.
 - I want to see a wide range of products displayed in an easy-to-see format.
 - I want the site to work on all screen sizes, depending on what device I use.
+- I want to be able to narrow the search for prodcuts rather than seeing all products.
+- I want to be able to edit and delete my products from the shopping bag.
+- I want to be able to see what other users have said about the products and the company.
+
 
 #### A Returning User
+- I want to be able to save my shipping info so ordering is faster next time.
 - I want to be able to login to the site and see what I have previously ordered.
 - I want to be able to find the products I like quickly with a search function.
 - I want to be able to leave a review of the company, products and my customer experience.
+- I want to be able to respond to other users reviews and posts on the site.
 - I want to be able to access the company's social media to share with my friends and family.
 
 ### Strategy
