@@ -196,6 +196,7 @@ the Review or comment to edit or delete that item.
 - All nav links working as intended.
 - Nav links look good on all screen sizes.
 - Search bar works, displaying all queried items.
+- Social media links work taking user to desired page.
 
 ### Products
 - Products all displaying with correct images. 
